@@ -104,6 +104,7 @@
     <Content Include="IndividualIndex.aspx" />
     <Content Include="individual_challenge_details.aspx" />
     <Content Include="individual_challenge_management.aspx" />
+    <Content Include="login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -196,6 +197,13 @@
     </Compile>
     <Compile Include="individual_challenge_management.aspx.designer.cs">
       <DependentUpon>individual_challenge_management.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
