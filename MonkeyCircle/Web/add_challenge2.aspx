@@ -182,6 +182,126 @@
 
 
 
+<<<<<<< HEAD
+    <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <section>
+                        <div id="content">
+                            <div class="row">
+                                <div class="col-md-9 profile-stream">
+                                    <div class="page-header row">
+                                        <div class="col-md-8">
+                                            <h3>新增挑战邀请</h3>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="row">
+                                                <div class="col-md-5"></div>
+                                                <div class="col-md-7"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <div style="text-align: center; margin-bottom: 20px;">
+                                                <img src="../image/new_c2.png"/>
+                                            </div>
+                                            <h4>已选择挑战项目</h4>
+                                            <div class="row col-md-12 col-no-left-padding">
+                                                <div id="chosenQuiz" runat="server">
+                                                    <div id="addbtn" class="alert alert-info" style="text-align: center" role="alert" runat="server">
+                                                        还没有选择测试题目
+                                                    </div>
+                                                </div>
+                                                <font id="wrongTip" color="red" runat="server"> </font>
+                                                <font id="rightTip" color="green" runat="server"> </font>
+                                            </div>
+                                            <div class="row col-md-12">
+                                                <h4 class="pull-left">挑战项目</h4>
+                                                <div class="pull-right">
+                                                    <div style="display: inline-block; vertical-align: top;">
+                                                        <form class="input-group" style="width: 200px" action="hr-set-challenge.action" method="post">
+                                                            <input type="hidden" name="relevel" value="1" id="input-relevel"/>
+                                                            <input type="hidden" name="retype" value="0" id="input-retype"/>
+                                                            <input type="hidden" name="republic" value="1" id="input-republic"/>
+                                                            <button class="btn btn-new1 pull-right">发布挑战</button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row col-md-12 col-no-left-padding">
+                                                <div class="panel-body">
+                                                    <div id="quizBoard" class="row" runat="server">
+                                                        <div class="col-md-4">
+                                                            <div class="panel panel-default project">
+                                                                <div class="panel-body" style="padding-bottom: 0;">
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12">
+                                                                            <div class="pull-left">
+                                                                                <h4></h4>
+                                                                            </div>
+                                                                            <div class="pull-right client-info">
+                                                                                <button style="color: white" class="btn btn-primary btn-sm">添加</button>
+                                                                                
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-12" style="min-height: 68px;">
+                                                                            <ul class="companyTags">
+                                                                                <li>Android</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="panel-footer">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-4">
+                                                                            <span class="small muted">项目难度</span>
+                                                                        </div>
+                                                                        <div class="col-sm-8">
+                                                                            <p>
+                                                                                <i class="fa fa-star"></i>
+                                                                                <i class="fa fa-star"></i>
+                                                                                <i class="fa fa-star"></i>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-user">
+	                                <div class="panel-heading">
+		                                <div class="panel-title">
+			                                <div class="media">
+				                                <a class="pull-left">
+					                                <img src="./image/d8c2208b-4354-43ed-a789-3cb64852bb75.png" class="media-object"/>
+				                                </a>
+				                                <div class="media-body">
+					                                <h4 class="media-heading">
+						                                <span>北京猿圈科技有限责任公司</span>
+					                                </h4>
+					                                <span class="text-muted">
+						                                <small>
+							                                上次登录日期:
+							                                <br/>
+							                                2016-04-27 13:59:38
+						                                </small>
+					                                </span>
+				                                </div>
+			                                </div>
+		                                </div>
+	                                </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </section>
+=======
 
 <div class="panel-user">
 	<div class="panel-heading">
@@ -217,6 +337,7 @@
 			<div class="details">
 				<div class="number">0</div>
 				<div class="description">今日接受挑战人数</div>
+>>>>>>> 719335d4d79572da20441227b3031528ac933298
 			</div>
 		</div>
 		<div class="stat-block stat-success">
@@ -366,6 +487,14 @@
 					$("#hint1").show();
 				}
 			});
+		}
+
+		function add(title)
+		{
+		    //alert(id);
+		    var content = document.getElementById("addbtn");
+		    content.innerHTML = title;
+		    alert(title);
 		}
 	</script>
 

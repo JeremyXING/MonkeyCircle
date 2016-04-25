@@ -99,6 +99,7 @@
     <Content Include="add_challenge.aspx" />
     <Content Include="add_challenge2.aspx" />
     <Content Include="add_challenge3.aspx" />
+    <Content Include="backend.aspx" />
     <Content Include="company_challenge_filter.aspx" />
     <Content Include="company_challenge_management.aspx" />
     <Content Include="IndividualIndex.aspx" />
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="add_challenge3.aspx.designer.cs">
       <DependentUpon>add_challenge3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend.aspx.cs">
+      <DependentUpon>backend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend.aspx.designer.cs">
+      <DependentUpon>backend.aspx</DependentUpon>
     </Compile>
     <Compile Include="companyIndex.aspx.cs">
       <DependentUpon>companyIndex.aspx</DependentUpon>
