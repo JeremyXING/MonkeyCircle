@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Challenge
+    public class ChallengeInfo
     {
         private int chanID;//挑战序号
         private int companyID;
         private int chanType;
         private int salary;
-        private bool open;
-        private DateTime publishTime;
-        private int questionID;
-        private int acceptNum;
-        private int finishNum;
-        private int lastAcceptNum;
-        private int lastFinishNum;
-        private bool status;
+        private bool openStatus;
+        private int questionID;        
+        private int status;
         private float passPer;
+        private DateTime publishTime;
+
+        //private int acceptNum;
+        //private int finishNum;
+        //private int lastAcceptNum;
+        //private int lastFinishNum;
     }
 }

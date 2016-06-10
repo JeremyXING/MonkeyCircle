@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    public class Question
+    public class QuestionInfo
     {
         private int qId;
         private string qTitle;

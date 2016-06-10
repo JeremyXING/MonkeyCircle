@@ -1,0 +1,5 @@
+E:\net\MonkeyCircle\MonkeyCircle\DBUtility\bin\Debug\DBUtility.dll
+E:\net\MonkeyCircle\MonkeyCircle\DBUtility\bin\Debug\DBUtility.pdb
+E:\net\MonkeyCircle\MonkeyCircle\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+E:\net\MonkeyCircle\MonkeyCircle\DBUtility\obj\Debug\DBUtility.dll
+E:\net\MonkeyCircle\MonkeyCircle\DBUtility\obj\Debug\DBUtility.pdb
