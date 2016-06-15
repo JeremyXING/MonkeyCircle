@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="company_challenge_management.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -119,6 +120,13 @@
     </Compile>
     <Compile Include="companyIndex.aspx.designer.cs">
       <DependentUpon>companyIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="company_challenge_management.aspx.cs">
+      <DependentUpon>company_challenge_management.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="company_challenge_management.aspx.designer.cs">
+      <DependentUpon>company_challenge_management.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="test.aspx.cs">

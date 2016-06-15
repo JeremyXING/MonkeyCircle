@@ -13,7 +13,7 @@ namespace BLL
     {
         private static readonly IChallenge dal = DALFactory.DataAccess.CreateChallenge();
 
-        public ChallengeInfo GetOrder(int companyId)
+        public ChallengeInfo GetChallenge(int companyId)
         {
             // Return the order from the DAL
             return dal.GetChallengeByCompanyID(companyId);
