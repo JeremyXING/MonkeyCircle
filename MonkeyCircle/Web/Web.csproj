@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="add_challenge.aspx" />
     <Content Include="company_challenge_management.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -114,6 +115,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="add_challenge.aspx.cs">
+      <DependentUpon>add_challenge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_challenge.aspx.designer.cs">
+      <DependentUpon>add_challenge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="companyIndex.aspx.cs">
       <DependentUpon>companyIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
