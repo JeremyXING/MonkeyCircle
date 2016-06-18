@@ -13,10 +13,10 @@
 <meta name="author" content="BootstrapStyler">
 <title>猿圈 新增挑战邀请</title>
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="http://www.oxcoder.com/sys/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+<link href="./css/font-awesome.min.css" rel="stylesheet">
 <link href="./css/bootstrap-switch.min.css" rel="stylesheet">
 <link href="./css/bootstrap-select.min.css" rel="stylesheet">
-<link href="http://www.oxcoder.com/sys/fonts/icomoon/style.css?v=1.0" rel="stylesheet">
+<link href="./css/style2.css" rel="stylesheet">
 <link href="./css/summernote.css" rel="stylesheet">
 <link href="./css/summernote-bs3.css" rel="stylesheet">
 <link href="./css/style.css" rel="stylesheet" type="text/css">
