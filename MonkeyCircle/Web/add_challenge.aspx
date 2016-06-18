@@ -1,11 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="add_challenge.aspx.cs" Inherits="Web.add_challenge" %>
 
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
 
-<!DOCTYPE html>
-<!-- saved from url=(0060)http://www.oxcoder.com/cooper/new/recruit/new_recruit_1.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!--<base href="http://www.oxcoder.com:80/">--><base href=".">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,15 +11,14 @@
 <meta name="author" content="BootstrapStyler">
 <title>猿圈 新增挑战邀请</title>
 <link href="./css/bootstrap.min.css" rel="stylesheet">
-<link href="http://www.oxcoder.com/sys/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet">
+<link href="./css/font-awesome.min.css" rel="stylesheet">
 <link href="./css/bootstrap-switch.min.css" rel="stylesheet">
 <link href="./css/bootstrap-select.min.css" rel="stylesheet">
-<link href="http://www.oxcoder.com/sys/fonts/icomoon/style.css?v=1.0" rel="stylesheet">
+<link href="./css/style2.css" rel="stylesheet">
 <link href="./css/summernote.css" rel="stylesheet">
 <link href="./css/summernote-bs3.css" rel="stylesheet">
 <link href="./css/style.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="./css/bootstrapValidator.min.css">
-
 <link rel="stylesheet" href="./css/jquery-confirm.min.css">
 <!-- Max css -->
 <link href="./css/style_new.css" rel="stylesheet" type="text/css">
@@ -57,16 +54,10 @@
 }
 </style>
 <link href="./css/WdatePicker.css" rel="stylesheet" type="text/css"><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+
+</head>
 <body onload="">
 	
-	
-
-
-
-
-
-
-
 <div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
 	<div class="container">
 		<div class="navbar-header">
