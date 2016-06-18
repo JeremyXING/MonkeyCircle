@@ -95,6 +95,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="add_challenge.aspx" />
+    <Content Include="add_challenge2.aspx" />
+    <Content Include="add_challenge3.aspx" />
     <Content Include="company_challenge_management.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -121,6 +123,20 @@
     </Compile>
     <Compile Include="add_challenge.aspx.designer.cs">
       <DependentUpon>add_challenge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_challenge2.aspx.cs">
+      <DependentUpon>add_challenge2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_challenge2.aspx.designer.cs">
+      <DependentUpon>add_challenge2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="add_challenge3.aspx.cs">
+      <DependentUpon>add_challenge3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="add_challenge3.aspx.designer.cs">
+      <DependentUpon>add_challenge3.aspx</DependentUpon>
     </Compile>
     <Compile Include="companyIndex.aspx.cs">
       <DependentUpon>companyIndex.aspx</DependentUpon>
