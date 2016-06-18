@@ -54,15 +54,8 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown" id="drop_down_nav">
 					<a href="http://www.oxcoder.com/#" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="text">
-							
-								
-								
-									365488192@qq.com
-								
-								
-								
-							
+						<span class="text">							
+									365488192@qq.com					
 						</span>
 						<b class="caret"></b>
 					</a>
