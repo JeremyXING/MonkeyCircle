@@ -10,19 +10,19 @@
     <meta name="description" content=""/>
     <meta name="author" content="BootstrapStyler"/>
     <title>企业 挑战管理</title>
-    <link href="http://www.oxcoder.com/sys/bootstrap/css/bootstrap.min.css?v=3.1.1" rel="stylesheet"/>
-    <link href="http://www.oxcoder.com/sys/fonts/font-awesome/css/font-awesome.min.css?v=4.0.3" rel="stylesheet"/>
-    <link href="http://www.oxcoder.com/sys/css/libs/bootstrap-switch.min.css?v=3.0.0" rel="stylesheet"/>
-    <link href="http://www.oxcoder.com/sys/css/libs/bootstrap-select.min.css" rel="stylesheet"/>
-    <link href="http://www.oxcoder.com/sys/fonts/icomoon/style.css?v=1.0" rel="stylesheet"/>
-    <link href="http://www.oxcoder.com/sys/css/libs/summernote.css" rel="stylesheet"/>
-    <link href="http://www.oxcoder.com/sys/css/libs/summernote-bs3.css" rel="stylesheet"/>
+    <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="./css/bootstrap-switch.min.css" rel="stylesheet"/>
+    <link href="./css/bootstrap-select.min.css" rel="stylesheet"/>
+    <link href="./css/style2.css" rel="stylesheet"/>
+    <link href="./css/summernote.css" rel="stylesheet"/>
+    <link href="./css/summernote-bs3.css" rel="stylesheet"/>
     <link href="./css/style.css" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="http://www.oxcoder.com/sys/css/libs/bootstrapValidator.min.css"/>
-    <!-- Max css -->
+    <link href="./css/bootstrapValidator.min.css" rel="stylesheet" />
     <link href="./css/style_new.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+ <form id="form1" runat="server">
     <div id="div_company_mini" style="display: none; position: fixed; right: 0px; bottom: 0px; width: 403px; height: 378px; overflow: hidden; z-index: 10089; cursor: move;">
         <div id="hz6d_cname_mini_div" style="font-size:16px;overflow:hidden;position:absolute;top:7px;left:10px;width:330px;height:20px;color:#fff;text-indent:30px;background:url(http://www15.53kf.com/style/chat/minichat2/img/minchat_ns_1.png) -79px 0 no-repeat;font-weight:bold;font-family:Arial;">猿圈</div>
         <div title="缩小" style="position:absolute;top:10px;right:46px;width:12px;height:12px;background:url(http://www15.53kf.com/style/chat/minichat2/img/min.png?11) no-repeat; cursor:pointer;" onclick="max_min_company_mini(this);"></div>
@@ -83,7 +83,7 @@
 	</div>
 </div>
 
-	<div class="container">
+    <div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<section>
@@ -93,7 +93,7 @@
 								<div class="container-fluid">
 									<section>
 										<section id="middle">
-											<input value="false" id="isHistory_id" type="hidden">
+											<input value="false" id="isHistory_id" type="hidden"/>
 											<h2 class="h2-tab">
 												<a href="./企业 挑战管理.htm" class="">进行中的挑战</a>
 											</h2>
@@ -105,18 +105,17 @@
 											</a>
 										</section>
 										<!-- /.page-header -->
+                                        
 										<div id="content">
 											<div class="row">
-												
-												
 													<div class="col-md-12">
 														<div class="panel panel-default project ">
 															<div class="panel-body">
 																<div class="row">
 																	<!-- new start-->
-																	<div class="col-md-5">
+																	<div class="col-md-5" >
 																		<h2 style="margin: 12px 0 2px 0;">
-                                                                            <asp:LinkButton href=".\猿圈 去筛选.htm" runat="server">[初级]Java工程师</asp:LinkButton>										
+                                                                            <asp:LinkButton OnClick="Unnamed1_Click" runat="server">[初级]Java工程师</asp:LinkButton>										
 																		</h2>
 																		<div style="width: 280px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
 																			<small class="text-muted">[2016.04.27] 
@@ -130,6 +129,7 @@
 																		</div>
 																		<!-- <p class="text-muted" style="padding: 0;margin: 0;">2015/01/12</p> -->
 																	</div>
+                                                                    </div>
 																	<div class="col-md-2">
 																		<ul class="list-unstyled" style="margin: 7px 0;">
 																			<li>
@@ -161,17 +161,17 @@
 																		
 																	</div>
 																	<!-- new end-->
-																</div>
-																<!-- /.row -->
 															</div>
-															<!-- /.panel-footer -->
+																<!-- /.row -->
 														</div>
-														<!-- /.panel -->
+															<!-- /.panel-footer -->
 													</div>
-												
+														<!-- /.panel -->
 											</div>
+												
+										</div>
 											<!-- /.row -->
-
+                                        
                                             <ul class="pagination">			
 		                                            <li class="disabled">
 		                                                <a aria-label="Previous">
@@ -186,14 +186,13 @@
 		                                                </a>
 		                                            </li>
                                             <li class="disabled"><a>共1条 1页</a></li>
-                                            </ul>
-										</div>
+                                           </ul>
 										<!-- /#content -->
 									</section>
 								</div>
 								<!-- /.container-fluid  -->
 							</div>
-							<div class="col-md-3 profile-info" id="profile_info_div">
+<div class="col-md-3 profile-info" id="profile_info_div">
 <div class="panel-user">
 	<div class="panel-heading">
 		<div class="panel-title">
@@ -209,7 +208,7 @@
 					<span class="text-muted">
 						<small>
 							上次登录日期:
-							<br>
+							<br/>
 							2016-04-27 13:59:38
 						</small>
 					</span>
@@ -255,8 +254,7 @@
 </div>
 <!-- /.panel -->
 </div>
-						</div>
-						<!-- /.row -->
+                        </div>
 					</div>
 					<!-- /#content -->
 				</section>
@@ -264,16 +262,17 @@
 		</div>
 		<!-- /.row -->
 	</div>
+						
 	<!-- /.container -->
-	<script src="./script/jquery-1.11.0.min.js"></script>
-	<script src="./script/bootstrap.min.js"></script>
-	<script src="./script/jquery.sparkline.min.js"></script>
-	<script src="./script/bootstrap-switch.min.js"></script>
-	<script src="./script/bootstrap-select.min.js"></script>
-	<script src="./script/bootstrap-filestyle.js"></script>
-	<script src="./script/summernote.min.js"></script>
-	<script src="./script/script.js"></script>
-	<script type="text/javascript" src="./script/pagination.js"></script>
+	<script src="./scripts/jquery-1.11.0.min.js"></script>
+	<script src="./scripts/bootstrap.min.js"></script>
+	<script src="./scripts/jquery.sparkline.min.js"></script>
+	<script src="./scripts/bootstrap-switch.min.js"></script>
+	<script src="./scripts/bootstrap-select.min.js"></script>
+	<script src="./scripts/bootstrap-filestyle.js"></script>
+	<script src="./scripts/summernote.min.js"></script>
+	<script src="./scripts/script.js"></script>
+	<script type="text/javascript" src="./scripts/pagination.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#profile_info_div").load("cooper/cooper_left_info.html");
@@ -284,10 +283,6 @@
 		}
 	</script>
 	<!-- 引入footer 必须在下边否则js出错 -->
-	
-
-
-
 
 <div class="afooter" style="">
 	<div class="container">
@@ -331,6 +326,6 @@ window.onload=function(){
 
 
 <script id="hz6d_flp_jquery" src="./php/jquery-1.4.2.flp.js" charset="utf-8" type="text/javascript"></script>
-
+</form>
 </body>
 </html>

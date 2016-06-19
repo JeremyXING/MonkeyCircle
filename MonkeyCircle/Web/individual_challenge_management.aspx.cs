@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace Web
 {
-    public partial class company_challenge_management : System.Web.UI.Page
+    public partial class individual_challenge_management : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Unnamed1_Click(object sender, EventArgs e)
         {
 
         }
