@@ -309,7 +309,7 @@
 				</script>
                 <span id="cnzz_stat_icon_1253509620">
                     <a href="http://www.cnzz.com/stat/website.php?web_id=1253509620" target="_blank" title="站长统计">
-                        <img border="0" hspace="0" vspace="0" src="./image/pic.gif">
+                        <img border="0" hspace="0" vspace="0" src="./image/pic.gif"/>
                     </a>
                 </span>
                 <script src="./php/z_stat.php" type="text/javascript"></script>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mc" Class="mcDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=lenovo_gyf;Initial Catalog=mc;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="mcConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Challenge" Member="Challenges">
+    <Type Name="Challenge">
+      <Column Name="chanID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="chanType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="salary" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[open]" Member="open" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="publishTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
