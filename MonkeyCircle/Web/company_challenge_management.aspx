@@ -115,16 +115,13 @@
 																	<!-- new start-->
 																	<div class="col-md-5" >
 																		<h2 style="margin: 12px 0 2px 0;">
-                                                                            <asp:LinkButton OnClick="Unnamed1_Click" runat="server">[初级]Java工程师</asp:LinkButton>										
+                                                                            <asp:LinkButton ID="typeLB" OnClick="Unnamed1_Click" runat="server"></asp:LinkButton>										
 																		</h2>
 																		<div style="width: 280px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
-																			<small class="text-muted">[2016.04.27] 
-																				
-																				
+                                                                            <asp:Label id="timeLable" CssClass="text-muted" runat="server"></asp:Label>
+																			<small class="text-muted">
 																					洗扑克牌&nbsp;
-																				
-																					身份证号判断&nbsp;
-																				
+																					身份证号判断&nbsp;			
 																			</small>
 																		</div>
 																		<!-- <p class="text-muted" style="padding: 0;margin: 0;">2015/01/12</p> -->

@@ -6,17 +6,24 @@ using System.Threading.Tasks;
 using Model;
 using IDAL;
 using DALFactory;
+using SQLServerDAL;
 
 namespace BLL
 {
     public class ChallengeBLL
     {
         private static readonly IChallenge dal = DALFactory.DataAccess.CreateChallenge();
+        
+        public int[] GetChallengeIDByUserID(int userId)
+        {
 
-        public ChallengeInfo GetChallenge(int companyId)
+            return null;
+        }
+
+        public ChallengeInfo GetChallengeByChanID(int chanID)
         {
             // Return the order from the DAL
-            return dal.GetChallengeByCompanyID(companyId);
+            return dal.GetChallengeBychanID(chanID);
         }
     }
 }

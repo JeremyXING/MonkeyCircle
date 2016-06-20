@@ -98,15 +98,11 @@
     <Content Include="add_challenge.aspx" />
     <Content Include="add_challenge2.aspx" />
     <Content Include="add_challenge3.aspx" />
+    <Content Include="company_challenge_filter.aspx" />
     <Content Include="company_challenge_management.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="mc.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>mc.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -119,7 +115,9 @@
     <Content Include="companyIndex.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="add_challenge.aspx.cs">
@@ -150,6 +148,13 @@
     <Compile Include="companyIndex.aspx.designer.cs">
       <DependentUpon>companyIndex.aspx</DependentUpon>
     </Compile>
+    <Compile Include="company_challenge_filter.aspx.cs">
+      <DependentUpon>company_challenge_filter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="company_challenge_filter.aspx.designer.cs">
+      <DependentUpon>company_challenge_filter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="company_challenge_management.aspx.cs">
       <DependentUpon>company_challenge_management.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -157,17 +162,13 @@
     <Compile Include="company_challenge_management.aspx.designer.cs">
       <DependentUpon>company_challenge_management.aspx</DependentUpon>
     </Compile>
-    <Compile Include="mc.cs">
-      <DependentUpon>mc.dbml</DependentUpon>
-    </Compile>
-    <Compile Include="mc.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>mc.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{6a669763-6a65-47f4-a86e-84a927b33997}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{838508a1-de18-4c64-8d81-eac741341dde}</Project>
       <Name>IDAL</Name>
@@ -183,11 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="mc.dbml.layout">
-      <DependentUpon>mc.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

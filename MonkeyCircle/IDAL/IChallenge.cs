@@ -11,6 +11,7 @@ namespace IDAL
     {
         void Insert(ChallengeInfo cha);//新建挑战
 
-        ChallengeInfo GetChallengeByCompanyID(int companyID);
+        //ChallengeInfo GetChallengeByCompanyID(int companyID);
+        ChallengeInfo GetChallengeBychanID(int chanID);
     }
 }

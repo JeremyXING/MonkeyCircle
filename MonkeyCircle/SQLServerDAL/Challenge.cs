@@ -13,8 +13,9 @@ namespace SQLServerDAL
 {
     public class Challenge:IChallenge
     {
-        private const string SQL_SELECT_CHALLENGE = "SELECT chanType FROM challenge WHERE companyID=@companyID";
-        private const string PARM_COMPANY_ID = "@companyID";
+        private const string SQL_SELECT_CHALLENGE = "SELECT chanType,salary,[open],publishTime,status FROM challenge WHERE chanID=@chanID";
+        private const string PARM_CHANLLENGE_ID = "@chanID";
+
 
         public void Insert(ChallengeInfo cha)
         {
@@ -22,18 +23,22 @@ namespace SQLServerDAL
             //SqlParameter[] orderParms = GetOrderParameters();
         }
 
-        public ChallengeInfo GetChallengeByCompanyID(int companyID)
+        public ChallengeInfo GetChallengeBychanID(int chanID)
         {
             ChallengeInfo cha = new ChallengeInfo();
-            SqlParameter parm = new SqlParameter(PARM_COMPANY_ID, SqlDbType.Int);
-            parm.Value = companyID;
+            SqlParameter parm = new SqlParameter(PARM_CHANLLENGE_ID, SqlDbType.Int);
+            parm.Value = chanID;
 
             using (SqlDataReader rdr = SqlHelper.ExecuteReader(SqlHelper.ConnectionString, CommandType.Text, SQL_SELECT_CHALLENGE, parm))
             {
 
                 if (rdr.Read())
                 {
-                    int temp = rdr.GetInt32(0);
+                    cha.chanType= rdr.GetInt32(0);
+                    cha.salary = rdr.GetInt32(1);
+                    cha.open = rdr.GetBoolean(2);
+                    cha.publishTime = rdr.GetDateTime(3);
+                    cha.status = rdr.GetBoolean(4);
                 }
             }
 
