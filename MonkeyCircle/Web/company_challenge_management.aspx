@@ -95,79 +95,65 @@
 										<section id="middle">
 											<input value="false" id="isHistory_id" type="hidden"/>
 											<h2 class="h2-tab">
-												<a href="./企业 挑战管理.htm" class="">进行中的挑战</a>
+												<a href="./company_challenge_management.aspx" class="">进行中的挑战</a>
 											</h2>
 											<h2 class="h2-tab">
-												<a href="http://www.oxcoder.com/cooper/index.html?isHistory=true" class="off">挑战历史</a>
+												<a href="./company_challenge_management.aspx" class="off">挑战历史</a>
 											</h2>
 											<a href="http://www.oxcoder.com/cooper/new/recruit/new_recruit_1.html">
-												<button class="btn btn-new1 pull-right" style="margin-top:20px;">新增挑战邀请</button>
+												<asp:LinkButton runat="server" class="btn btn-new1 pull-right" style="margin-top:20px;">新增挑战邀请</asp:LinkButton>
 											</a>
 										</section>
 										<!-- /.page-header -->
                                         
-										<div id="content">
+										<div id="content1" runat="server">
 											<div class="row">
 													<div class="col-md-12">
 														<div class="panel panel-default project ">
 															<div class="panel-body">
 																<div class="row">
-																	<!-- new start-->
 																	<div class="col-md-5" >
 																		<h2 style="margin: 12px 0 2px 0;">
                                                                             <asp:LinkButton ID="typeLB" OnClick="Unnamed1_Click" runat="server"></asp:LinkButton>										
 																		</h2>
 																		<div style="width: 280px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">
                                                                             <asp:Label id="timeLable" CssClass="text-muted" runat="server"></asp:Label>
-																			<small class="text-muted">
-																					洗扑克牌&nbsp;
-																					身份证号判断&nbsp;			
-																			</small>
 																		</div>
-																		<!-- <p class="text-muted" style="padding: 0;margin: 0;">2015/01/12</p> -->
 																	</div>
-                                                                    </div>
 																	<div class="col-md-2">
 																		<ul class="list-unstyled" style="margin: 7px 0;">
 																			<li>
-																				<span class="badge badge-info">0</span>
-																				个新接受
+																				<asp:Label class="badge badge-info" runat="server">0</asp:Label>个新接受
 																			</li>
 																			<li>
-																				<span class="badge badge-danger">0</span>
-																				个新完成
+																				<asp:Label class="badge badge-danger" runat="server">0</asp:Label>个新完成
 																			</li>
 																		</ul>
 																	</div>
 																	<div class="col-md-2">
 																		<ul class="list-unstyled" style="margin: 20px 0;">
 																			<li>
-																				<span class="red">0.0</span>
-																				%已合格
+																				<asp:Label class="red" runat="server">0.0</asp:Label>%已合格
 																			</li>
 																		</ul>
 																	</div>
 																	<div class="col-md-3">
-																		<a href=".\猿圈 去筛选.htm">
-																			<button type="button" class="btn btn-new1" style="">去筛选</button>
-																		</a>
-																		
-																			<a href="http://www.oxcoder.com/cooper/invite/user/invite_user.html?recruitId=3141">
-																				<button type="button" class="btn btn-new1" style="margin: 16px 5px;">邀请</button>
-																			</a>
-																		
+                                                                        <a href=".\a.htm">
+																		    <asp:LinkButton class="btn btn-new1" style="" runat="server">去筛选</asp:LinkButton>
+                                                                        </a>
+                                                                        <a href=".\a.htm">
+																		    <asp:LinkButton class="btn btn-new1" style="margin: 16px 5px;" runat="server">邀请</asp:LinkButton>
+                                                                        </a>
 																	</div>
-																	<!-- new end-->
+                                                                </div>
 															</div>
-																<!-- /.row -->
 														</div>
-															<!-- /.panel-footer -->
 													</div>
-														<!-- /.panel -->
 											</div>
-												
+
 										</div>
-											<!-- /.row -->
+                                        
+											
                                         
                                             <ul class="pagination">			
 		                                            <li class="disabled">
@@ -184,10 +170,8 @@
 		                                            </li>
                                             <li class="disabled"><a>共1条 1页</a></li>
                                            </ul>
-										<!-- /#content -->
 									</section>
 								</div>
-								<!-- /.container-fluid  -->
 							</div>
 <div class="col-md-3 profile-info" id="profile_info_div">
 <div class="panel-user">
@@ -253,7 +237,6 @@
 </div>
                         </div>
 					</div>
-					<!-- /#content -->
 				</section>
 			</div>
 		</div>

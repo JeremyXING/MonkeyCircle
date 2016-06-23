@@ -7,23 +7,24 @@ using Model;
 using IDAL;
 using DALFactory;
 using SQLServerDAL;
+using System.Collections;
 
 namespace BLL
 {
     public class ChallengeBLL
     {
-        private static readonly IChallenge dal = DALFactory.DataAccess.CreateChallenge();
-        
-        public int[] GetChallengeIDByUserID(int userId)
-        {
+        private static readonly IChallenge challengeDAL = DALFactory.DataAccess.CreateChallenge();
+        private static readonly IPublishChallenge pcDAL = DALFactory.DataAccess.CreatePC();
 
-            return null;
+        public ArrayList GetPCByUserID(int userID)
+        {
+            return pcDAL.GetPCByUserID(userID);
         }
 
         public ChallengeInfo GetChallengeByChanID(int chanID)
         {
             // Return the order from the DAL
-            return dal.GetChallengeBychanID(chanID);
+            return challengeDAL.GetChallengeBychanID(chanID);
         }
     }
 }

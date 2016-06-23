@@ -18,5 +18,11 @@ namespace DALFactory
             string className = path + ".Challenge";
             return (IDAL.IChallenge)Assembly.Load(path).CreateInstance(className);
         }
+
+        public static IDAL.IPublishChallenge CreatePC()
+        {
+            string className = path + ".publishChallenge";
+            return (IDAL.IPublishChallenge)Assembly.Load(path).CreateInstance(className);
+        }
     }
 }

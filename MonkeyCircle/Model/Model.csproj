@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChallengeInfo.cs" />
-    <Compile Include="DoChallenge.cs" />
+    <Compile Include="DoChallengeInfo.cs" />
     <Compile Include="MC.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -55,6 +55,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="publishChallengeInfo.cs" />
     <Compile Include="QuestionInfo.cs" />
   </ItemGroup>
   <ItemGroup>

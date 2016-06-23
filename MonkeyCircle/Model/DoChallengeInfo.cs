@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.DoChallenge")]
-    public partial class DoChallenge : INotifyPropertyChanging, INotifyPropertyChanged
+    public partial class DoChallengeInfo : INotifyPropertyChanging, INotifyPropertyChanged
     {
 
         private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -43,7 +43,7 @@ namespace Model
         partial void OnscoreChanged();
         #endregion
 
-        public DoChallenge()
+        public DoChallengeInfo()
         {
             OnCreated();
         }
