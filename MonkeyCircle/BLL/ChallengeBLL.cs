@@ -23,7 +23,6 @@ namespace BLL
 
         public ChallengeInfo GetChallengeByChanID(int chanID)
         {
-            // Return the order from the DAL
             return challengeDAL.GetChallengeBychanID(chanID);
         }
     }

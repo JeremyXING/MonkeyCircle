@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChallenge.cs" />
+    <Compile Include="IDoChallenge.cs" />
     <Compile Include="IPublishChallenge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

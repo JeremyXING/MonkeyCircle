@@ -72,9 +72,8 @@
     <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="col-xs-12 col-no-left-padding">
-				<h1 class="pull-left">[初级]Java工程师</h1>
-                <button class="btn btn-new1 pull-right" onclick="closeRecruit(&#39;3141&#39;)" style="margin-top: 20px;">关闭该挑战</button>
+			<div id="titleDIV" class="col-xs-12 col-no-left-padding" runat="server">
+                <asp:LinkButton class="btn btn-new1 pull-right" style="margin-top: 20px;" runat="server">关闭该挑战</asp:LinkButton>
 			</div>
 			<div>
 				<span class="help-block has-error">
@@ -82,15 +81,12 @@
 				</span>
 			</div>
 			<small>
-				<a href=".\company_challenge_management.aspx">
-					<i class="imoon imoon-arrow-left2"></i>
-					返回
-				</a>
+				<a href=".\company_challenge_management.aspx"><i class="imoon imoon-arrow-left2"></i>返回</a>
 			</small>
 		</div>
 		<div class="col-md-12">
-			<div class="challenge-simple-desc">
-				<span class="desc-label">发起时间：2016.04.27</span>
+			<div id="chaInfoDIV" class="challenge-simple-desc">
+				<span id="timeSpan" class="desc-label" runat="server"></span>
 				<span class="desc-label">接受挑战：1</span>
 				<span class="desc-label">完成挑战：1</span>
 				<span class="desc-label">所选项目：洗扑克牌&nbsp;&nbsp;身份证号判断&nbsp;&nbsp;</span>

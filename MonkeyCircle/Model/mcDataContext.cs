@@ -8,6 +8,17 @@ using System.Data.Linq.Mapping;
 
 namespace Model
 {
+    using System.Data.Linq;
+    using System.Data.Linq.Mapping;
+    using System.Data;
+    using System.Collections.Generic;
+    using System.Reflection;
+    using System.Linq;
+    using System.Linq.Expressions;
+    using System.ComponentModel;
+    using System;
+
+
     [global::System.Data.Linq.Mapping.DatabaseAttribute(Name = "mc")]
     public partial class MCDataContext : System.Data.Linq.DataContext
     {
@@ -16,6 +27,9 @@ namespace Model
 
         #region Extensibility Method Definitions
         partial void OnCreated();
+        partial void InsertDoChallenge(DoChallenge instance);
+        partial void UpdateDoChallenge(DoChallenge instance);
+        partial void DeleteDoChallenge(DoChallenge instance);
         #endregion
 
         public MCDataContext() :
@@ -48,11 +62,11 @@ namespace Model
             OnCreated();
         }
 
-        public System.Data.Linq.Table<ChallengeInfo> Challenges
+        public System.Data.Linq.Table<DoChallenge> DoChallenges
         {
             get
             {
-                return this.GetTable<ChallengeInfo>();
+                return this.GetTable<DoChallenge>();
             }
         }
     }

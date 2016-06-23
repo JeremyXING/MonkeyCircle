@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     [global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.DoChallenge")]
-    public partial class DoChallengeInfo : INotifyPropertyChanging, INotifyPropertyChanged
+    public partial class DoChallenge : INotifyPropertyChanging, INotifyPropertyChanged
     {
 
         private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
@@ -21,9 +21,13 @@ namespace Model
 
         private System.Nullable<bool> _finishStatus;
 
-        private System.Nullable<bool> _result;
+        private System.Nullable<int> _useTime;
 
         private System.Nullable<int> _score;
+
+        private System.Nullable<System.DateTime> _acceptTime;
+
+        private System.Nullable<System.DateTime> _finishTime;
 
         #region Extensibility Method Definitions
         partial void OnLoaded();
@@ -37,13 +41,17 @@ namespace Model
         partial void OnacceptStatusChanged();
         partial void OnfinishStatusChanging(System.Nullable<bool> value);
         partial void OnfinishStatusChanged();
-        partial void OnresultChanging(System.Nullable<bool> value);
-        partial void OnresultChanged();
+        partial void OnuseTimeChanging(System.Nullable<int> value);
+        partial void OnuseTimeChanged();
         partial void OnscoreChanging(System.Nullable<int> value);
         partial void OnscoreChanged();
+        partial void OnacceptTimeChanging(System.Nullable<System.DateTime> value);
+        partial void OnacceptTimeChanged();
+        partial void OnfinishTimeChanging(System.Nullable<System.DateTime> value);
+        partial void OnfinishTimeChanged();
         #endregion
 
-        public DoChallengeInfo()
+        public DoChallenge()
         {
             OnCreated();
         }
@@ -128,22 +136,22 @@ namespace Model
             }
         }
 
-        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_result", DbType = "Bit")]
-        public System.Nullable<bool> result
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_useTime", DbType = "Int")]
+        public System.Nullable<int> useTime
         {
             get
             {
-                return this._result;
+                return this._useTime;
             }
             set
             {
-                if ((this._result != value))
+                if ((this._useTime != value))
                 {
-                    this.OnresultChanging(value);
+                    this.OnuseTimeChanging(value);
                     this.SendPropertyChanging();
-                    this._result = value;
-                    this.SendPropertyChanged("result");
-                    this.OnresultChanged();
+                    this._useTime = value;
+                    this.SendPropertyChanged("useTime");
+                    this.OnuseTimeChanged();
                 }
             }
         }
@@ -164,6 +172,46 @@ namespace Model
                     this._score = value;
                     this.SendPropertyChanged("score");
                     this.OnscoreChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_acceptTime", DbType = "DateTime")]
+        public System.Nullable<System.DateTime> acceptTime
+        {
+            get
+            {
+                return this._acceptTime;
+            }
+            set
+            {
+                if ((this._acceptTime != value))
+                {
+                    this.OnacceptTimeChanging(value);
+                    this.SendPropertyChanging();
+                    this._acceptTime = value;
+                    this.SendPropertyChanged("acceptTime");
+                    this.OnacceptTimeChanged();
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_finishTime", DbType = "DateTime")]
+        public System.Nullable<System.DateTime> finishTime
+        {
+            get
+            {
+                return this._finishTime;
+            }
+            set
+            {
+                if ((this._finishTime != value))
+                {
+                    this.OnfinishTimeChanging(value);
+                    this.SendPropertyChanging();
+                    this._finishTime = value;
+                    this.SendPropertyChanged("finishTime");
+                    this.OnfinishTimeChanged();
                 }
             }
         }
