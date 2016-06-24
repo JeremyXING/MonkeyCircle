@@ -25,5 +25,22 @@ namespace BLL
         {
             return challengeDAL.GetChallengeBychanID(chanID);
         }
+
+        public bool PublishChallenge(int type,int salary,bool open)
+        {
+            IChallenge cDAL = new Challenge();
+            ChallengeInfo chaInfo = new ChallengeInfo();
+
+            chaInfo.chanID=cDAL.GetMaxChanID()+1;
+            chaInfo.chanType = type;
+            chaInfo.salary = salary;
+            chaInfo.open = open;
+            chaInfo.publishTime= DateTime.Now;
+            chaInfo.status = true;
+
+            cDAL.InsertCha(chaInfo);
+
+            return false;
+        }
     }
 }

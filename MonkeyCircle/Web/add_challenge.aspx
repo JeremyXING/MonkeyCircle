@@ -20,13 +20,9 @@
 <link href="./css/style.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="./css/bootstrapValidator.min.css"/>
 <link rel="stylesheet" href="./css/jquery-confirm.min.css"/>
-<!-- Max css -->
 <link href="./css/style_new.css" rel="stylesheet" type="text/css"/>
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
+<script src="./scripts/html5shiv.js"></script>
+<script src="./scripts/respond.min.js"></script>
 <style type="text/css">
 .level-tag {
 	border: 1px solid #efefef;
@@ -53,68 +49,61 @@
 	}
 }
 </style>
-<link href="./css/WdatePicker.css" rel="stylesheet" type="text/css"><style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style></head>
+<link href="./css/WdatePicker.css" rel="stylesheet" type="text/css"/>
+<style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style>
 
 </head>
 <body onload="">
 	
-<div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
-	<div class="container">
-		<div class="navbar-header">
-			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/cooper/index.html" style="padding: 0;">
-				<img src="./image/wlogo_sm.png" style="max-height: 35px;margin:7px;">
-			</a>
-		</div>
-		<div class="navbar-collapse collapse" role="navigation">
-			<ul class="nav navbar-nav">
-				<li class="">
-					<a href="http://www.oxcoder.com/cooper/oxcoder_corp_index.html">首页</a>
-				</li>
-				<li class="">
-					<a href="http://www.oxcoder.com/cooper/recommended/talent/index.html">人才推荐</a>
-				</li>
-				<li class="active">
-					<a href="http://www.oxcoder.com/cooper/index.html">挑战管理</a>
-				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="text">
-							
-								
-								
-								
-									北京猿圈科技有限责任公司
-								
-							
-						</span>
-						<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="http://www.oxcoder.com/cooper/pay/view_balance.html">去打赏</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/cooper/cooperInfo/view_cooper_info.html">企业信息</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/cooper/cooperInfo/account_binding.html">帐号设置</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/security_logout">注销</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
+    <div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
+	    <div class="container">
+		    <div class="navbar-header">
+			    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/cooper/index.html" style="padding: 0;">
+				    <img src="./image/wlogo_sm.png" style="max-height: 35px;margin:7px;">
+			    </a>
+		    </div>
+		    <div class="navbar-collapse collapse" role="navigation">
+			    <ul class="nav navbar-nav">
+				    <li class="">
+					    <a href="http://www.oxcoder.com/cooper/oxcoder_corp_index.html">首页</a>
+				    </li>
+				    <li class="">
+					    <a href="http://www.oxcoder.com/cooper/recommended/talent/index.html">人才推荐</a>
+				    </li>
+				    <li class="active">
+					    <a href="http://www.oxcoder.com/cooper/index.html">挑战管理</a>
+				    </li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+				    <li class="dropdown">
+					    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						    <span class="text">北京猿圈科技有限责任公司</span>
+						    <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">
+						    <li>
+							    <a href="http://www.oxcoder.com/cooper/pay/view_balance.html">去打赏</a>
+						    </li>
+						    <li>
+							    <a href="http://www.oxcoder.com/cooper/cooperInfo/view_cooper_info.html">企业信息</a>
+						    </li>
+						    <li>
+							    <a href="http://www.oxcoder.com/cooper/cooperInfo/account_binding.html">帐号设置</a>
+						    </li>
+						    <li>
+							    <a href="http://www.oxcoder.com/security_logout">注销</a>
+						    </li>
+					    </ul>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+    </div>
 
 	<div class="container">
 		<div class="row">
@@ -131,176 +120,142 @@
 								<div class="page-body">
 									<div class="row">
 										<div style="text-align:center;margin-bottom:20px;">
-											<img src="./image/nc1.png">
+											<img src="./image/nc1.png"/>
                                         </div>
-										<form id="new_challenge_form_1" method="post" class="form-horizontal bv-form" action="" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-											<input name="direction" id="directions_id" value="" type="hidden">
-											<input name="level" id="level_id" value="" type="hidden">
+										<form id="new_challenge_form_1" method="post" class="form-horizontal bv-form" action="add_challenge2.aspx" novalidate="novalidate" onsubmit="return checkForm()">
+                                            <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+											<input type="hidden" name="relevel" value="1" id="input-relevel"/>
+                                            <input type="hidden" name="retype" value="0" id="input-retype"/>
+                                            <input type="hidden" name="republic" value="1" id="input-republic"/>
 											<h4 class="col-md-12 col-no-left-padding">请选择挑战类型</h4>
 											<div class="fivecolumns">
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;1&#39;)">
-														<div id="a-Java" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./image/java.png">
-																			Java
-																		</h3>
-																	</div>
+													<div class="col-md-3 col-no-left-padding test">
+													<a id="a-java" data-toggle="pill">
+														<div class="panel panel-default shadow-effect ">
+															<div class="panel-body">
+																<div class="row" style="text-align: center;">
+																	<h3>
+																	<img src="./image/java.png"/>
+																		Java
+																	</h3>
 																</div>
 															</div>
 														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;2&#39;)">
-														<div id="a-Android" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./image/android.png">
-																			Android
-																		</h3>
-																	</div>
+													</a>
+												</div>
+												<div class="col-md-3 col-no-left-padding test">
+													<a id="a-android" data-toggle="pill">
+														<div class="panel panel-default shadow-effect">
+															<div class="panel-body">
+																<div class="row" style="text-align: center;">
+																	<h3>
+																		<img src="./image/android.png"/>
+																		Android
+																	</h3>
 																</div>
 															</div>
 														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;3&#39;)">
-														<div id="a-iOS" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./image/apple.png">
-																			iOS
-																		</h3>
-																	</div>
+													</a>
+												</div>
+												<div class="col-md-3 col-no-left-padding test">
+													<a id="a-ios" data-toggle="pill">
+														<div class="panel panel-default shadow-effect">
+															<div class="panel-body">
+																<div class="row" style="text-align: center;">
+																	<h3>
+																		<img src="./image/apple.png"/>
+																		iOS
+																	</h3>
 																</div>
 															</div>
 														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;4&#39;)">
-														<div id="a-C语言(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./image/c.png">
-																			C语言(beta)
-																		</h3>
-																	</div>
+													</a>
+												</div>
+												<div class="col-md-3 col-no-left-padding test">
+													<a id="a-c" data-toggle="pill">
+														<div class="panel panel-default shadow-effect ">
+															<div class="panel-body">
+																<div class="row" style="text-align: center;">
+																	<h3>
+																		<img style="width:64px;height:64px" src="./image/c.png"/>
+																		C语言(BETA)
+																	</h3>
 																</div>
 															</div>
 														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;5&#39;)">
-														<div id="a-C++(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./image/cpp.png">
-																			C++(beta)
-																		</h3>
-																	</div>
+													</a>
+												</div>
+												<div class="col-md-3 col-no-left-padding test">
+													<a id="a-cpp" data-toggle="pill">
+														<div class="panel panel-default shadow-effect ">
+															<div class="panel-body">
+																<div class="row" style="text-align: center;">
+																	<h3>
+																		<img src="./image/cpp.png"/>
+																		C++(BETA)
+																	</h3>
 																</div>
 															</div>
 														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;6&#39;)">
-														<div id="a-php(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./image/php.png">
-																			php(beta)
-																		</h3>
-																	</div>
+													</a>
+												</div>
+												<div class="col-md-3 col-no-left-padding test">
+													<a id="a-php" data-toggle="pill">
+														<div class="panel panel-default shadow-effect ">
+															<div class="panel-body">
+																<div class="row" style="text-align: center;">
+																	<h3>
+																		<img src="./image/php.png"/>
+																		PHP(BETA)
+																	</h3>
 																</div>
 															</div>
 														</div>
-													</div>
-												
-													<div class="col-md-3 col-no-left-padding test" onclick="selectDirection(&#39;7&#39;)">
-														<div id="a-Python(beta)" data-toggle="pill" style="cursor: pointer;">
-															<div class="panel panel-default shadow-effect ">
-																<div class="panel-body">
-																	<div class="row" style="text-align: center;">
-																		<h3>
-																			
-																			<img style="width:64px;height:64px" src="./image/python.png">
-																			Python(beta)
-																		</h3>
-																	</div>
+													</a>
+												</div>
+												<div class="col-md-3 col-no-left-padding test">
+													<a id="a-python" data-toggle="pill">
+														<div class="panel panel-default shadow-effect ">
+															<div class="panel-body">
+																<div class="row" style="text-align: center;">
+																	<h3>
+																		<img src="./image/python.png"/>
+																		Python(BETA)
+																	</h3>
 																</div>
 															</div>
 														</div>
-													</div>
-												
+													</a>
+												</div>
 											</div>
 											<h4 class="col-md-12 col-no-left-padding">请选择挑战等级(按薪资划分)</h4>
 											<ul class="nav nav-pills nav-justified col-md-12 col-no-left-padding">
-												
-													<li class="level-tag" onclick="selectLevel(&#39;1&#39;)">
-														<a href="javascript:void(0)" data-toggle="pill">2K~5K</a>
-													</li>
-												
-													<li class="level-tag" onclick="selectLevel(&#39;2&#39;)">
-														<a href="javascript:void(0)" data-toggle="pill">5K~8K</a>
-													</li>
-												
-													<li class="level-tag" onclick="selectLevel(&#39;3&#39;)">
-														<a href="javascript:void(0)" data-toggle="pill">8K~10K</a>
-													</li>
-												
-													<li class="level-tag" onclick="selectLevel(&#39;4&#39;)">
-														<a href="javascript:void(0)" data-toggle="pill">10K~12K</a>
-													</li>
-												
-													<li class="level-tag" onclick="selectLevel(&#39;5&#39;)">
-														<a href="javascript:void(0)" data-toggle="pill">12K~15K</a>
-													</li>
-												
-													<li class="level-tag" onclick="selectLevel(&#39;6&#39;)">
-														<a href="javascript:void(0)" data-toggle="pill">15K以上</a>
-													</li>
-												
+												<li class="level-tag" relevel="1"><a data-toggle="pill">2k~5k</a></li>
+												<li class="level-tag" relevel="2"><a data-toggle="pill">5k~8k</a></li>
+												<li class="level-tag" relevel="3"><a data-toggle="pill">8k~10k</a></li>
+												<li class="level-tag" relevel="4"><a data-toggle="pill">10k~12k</a></li>
+												<li class="level-tag" relevel="5"><a data-toggle="pill">12k~15k</a></li>
+												<li class="level-tag" relevel="6"><a data-toggle="pill">15k以上</a></li>
 											</ul>
 											<h4 class="col-md-12 col-no-left-padding">
 												<label style="font-weight: 100;">
-													<input name="is_public" value="1" type="checkbox" checked="checked"> 设为公开挑战
+													<input id="check-public" name="check-public" value="1" type="checkbox" checked="checked"/> 设为公开挑战
 												</label>
 											</h4>
 											<span class="col-md-12 col-no-left-padding text-muted">选择公开挑战，您发布的挑战将在首页显示，猿圈用户的可自由开始挑战；若不选择，用户只有您邀请后才可开始挑战。</span>
-											<hr>
+											<hr/>
 											<div class="form-group form-actions col-md-12 col-no-left-padding">
 												<span class="help-block has-error">
 													<small style="margin-left: 20px; display: none;" id="hint1" class="help-block">请选择挑战类型及等级</small>
 												</span>
 												<div class="align-center">
-													<button id="new_challenge_btn_1" class="btn btn-new1" type="submit">保存&amp;下一步</button>
+													<button id="nextStep" class="btn btn-new1" type="submit">保存&amp;下一步</button>
 												</div>
 											</div>
 										</form>
 									</div>
-									<!--/.row   -->
 								</div>
 							</div>
-							<div class="col-md-3 profile-info" id="profile_info_div">
 
 
 
@@ -364,19 +319,24 @@
 	</div>
 	<!-- /.panel-body -->
 </div>
-<!-- /.panel -->
-</div>
 						</div>
-						<!-- /.row -->
 					</div>
 					<!-- /#content -->
 				</section>
 			</div>
-		</div>
-		<!-- /.row -->
+        </div>
 	</div>
-	<!-- /.container -->
-	<!-- 引入footer -->
+
+    <div class="afooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    © 2015 oxcoder.com <a href="http://www.oxcoder.com/contact-us.action">联系我们</a> <a href="http://jq.qq.com/?_wv=1027&k=eeKvVb" target="_blank">QQ交流群:77590762</a> <a href="http://www.mikecrm.com/f.php?t=7GdYKp" target="_blank">意见反馈</a> <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://"); document.write(unescape("%3Cspan id='cnzz_stat_icon_1253509620'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1253509620%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1253509620"><a href="http://www.cnzz.com/stat/website.php?web_id=1253509620" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="./image/pic.gif"></a></span><script src="../Public/PHP/z_stat.php" type="text/javascript"></script><script src="./image/core.php" charset="utf-8" type="text/javascript"></script>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 	
 	<script src="./scripts/jquery-1.11.0.min.js"></script>
 	<script src="./scripts/bootstrap.min.js"></script>
@@ -394,60 +354,68 @@
 	
 	<script src="./scripts/zmUtil.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#profile_info_div").load("cooper/cooper_left_info.html");
-			$(".test div").click(function(e) {
-				e.preventDefault();
-				$(".test div").removeClass("active");
-				$(this).addClass("active");
-			});
-			$(".level-tag a").click(function(e) {
-				if ($(".active").length = 2) {
-					$("#new_challenge_btn_1").removeAttr("disabled");
-					$("#hint1").hide();
-				} else {
-					$("#new_challenge_btn_1").attr("disabled", "true");
-					$("#hint1").show();
-				}
-			});
+		$('.test a').click(function (e) {
+		    e.preventDefault();
+		    $('.test a').removeClass("active");
+		    $(this).addClass("active");
+		    checkForm();
+		})
+		$('.level-tag a').click(function (e) {
+		    if ($(".active").length = 2) {
+		        $('#nextStep').removeAttr("disabled");
+		        $('#hint1').hide();
+		    } else {
+		        $('#nextStep').attr('disabled', "true");
+		        $('#hint1').show();
+		    }
+		})
+		function checkForm() {
 
-			$("#new_challenge_form_1").bootstrapValidator({
-			}).on("success.form.bv", function(e) {
-		        e.preventDefault();
-		        var $form = $(e.target);
-		        $form.data("bootstrapValidator");
-		        if ($Util.isEmpty($("#directions_id").val())) {
-					$("#hint1").html("请选择挑战类型");
-					$("#hint1").show();
-					return false;
-				}
-		        if ($Util.isEmpty($("#level_id").val())) {
-		        	$("#hint1").html("请选择挑战等级");
-		        	$("#hint1").show();
-					return false;
-				}
-		        $.post("cooper/new/recruit/save_new_recruit_1.html", $form.serialize(), function(data) {
-					if(data.su){
-						location.href = data.url;
-					}else{
-						$("#hint1").html(data.msg);
-					}
-				}, "json");
-		    });
-		});
-		function selectDirection(obj){
-			$("#directions_id").val(obj);
-			$("#hint1").hide();
-			$("#new_challenge_btn_1").removeAttr("disabled");
-		};
-		function selectLevel(obj){
-			$("#level_id").val(obj);
-			$("#hint1").hide();
-			$("#new_challenge_btn_1").removeAttr("disabled");
-		};
-		function go_to_import_job_url(){
-			location.href = "cooper/oxcoder_corp_in.html";
+		    if ($(".active").length >= 2) {
+		        $('#nextStep').removeAttr("disabled");
+		        $('#hint1').hide();
+		        return true;
+		    } else {
+		        $('#nextStep').attr('disabled', "true");
+		        $('#hint1').show();
+		        return false;
+		    }
 		}
+
+		//这里设置项目的类型
+		$('#a-java').click(function () {
+		    $("#input-retype").val("1");
+		});
+		$('#a-android').click(function () {
+		    $("#input-retype").val("2");
+		});
+		$('#a-ios').click(function () {
+		    $("#input-retype").val("3");
+		});
+		$('#a-c').click(function () {
+		    $("#input-retype").val("4");
+		});
+		$('#a-cpp').click(function () {
+		    $("#input-retype").val("5");
+		});
+		$('#a-php').click(function () {
+		    $("#input-retype").val("6");
+		});
+		$('#a-python').click(function () {
+		    $("#input-retype").val("7");
+		});
+
+		$(".level-tag").click(function () {
+		    $("#input-relevel").val($(this).attr("relevel"));
+		});
+
+		$("#check-public").click(function () {
+		    if (document.getElementById("check-public").checked) {
+		        $("#input-republic").val("1");
+		    } else {
+		        $("#input-republic").val("0");
+		    }
+		});
 	</script>
 
 

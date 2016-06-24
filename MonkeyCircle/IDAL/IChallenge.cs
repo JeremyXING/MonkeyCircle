@@ -9,9 +9,11 @@ namespace IDAL
 {
     public interface IChallenge
     {
-        void Insert(ChallengeInfo cha);//新建挑战
+        void InsertCha(ChallengeInfo cha);//新建挑战
 
         //ChallengeInfo GetChallengeByCompanyID(int companyID);
         ChallengeInfo GetChallengeBychanID(int chanID);
+
+        int GetMaxChanID();
     }
 }
