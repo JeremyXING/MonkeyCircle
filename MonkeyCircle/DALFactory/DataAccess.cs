@@ -25,10 +25,10 @@ namespace DALFactory
             return (IDAL.IPublishChallenge)Assembly.Load(path).CreateInstance(className);
         }
 
-        public static IDAL.IDoChallenge CreateDC()
+        public static IDAL.ICompany CreateCompany()
         {
-            string className = path + ".DoChallenge";
-            return (IDAL.IDoChallenge)Assembly.Load(path).CreateInstance(className);
+            string className = path + ".Company";
+            return (IDAL.ICompany)Assembly.Load(path).CreateInstance(className);
         }
     }
 }

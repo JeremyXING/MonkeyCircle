@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Model;
 using IDAL;
 using DALFactory;
 using SQLServerDAL;
+using DBUtility;
 using System.Collections;
 
 namespace BLL
@@ -23,24 +25,13 @@ namespace BLL
 
         public ChallengeInfo GetChallengeByChanID(int chanID)
         {
+            // Return the order from the DAL
             return challengeDAL.GetChallengeBychanID(chanID);
         }
 
-        public bool PublishChallenge(int type,int salary,bool open)
+        public SqlDataReader GetChallengeByCodition(int Type, int salary, String location)
         {
-            IChallenge cDAL = new Challenge();
-            ChallengeInfo chaInfo = new ChallengeInfo();
-
-            chaInfo.chanID=cDAL.GetMaxChanID()+1;
-            chaInfo.chanType = type;
-            chaInfo.salary = salary;
-            chaInfo.open = open;
-            chaInfo.publishTime= DateTime.Now;
-            chaInfo.status = true;
-
-            cDAL.InsertCha(chaInfo);
-
-            return false;
+            return challengeDAL.GetChallengeByCondition(Type, salary, location);
         }
     }
 }

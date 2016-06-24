@@ -42,12 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ChallengeBLL.cs" />
+    <Compile Include="CompanyBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DALFactory\DALFactory.csproj">
       <Project>{4f387ab5-df86-49b5-a905-08316fcd63be}</Project>
       <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{18cb2b09-b7e4-4bc6-96e7-c8869d58aab3}</Project>
+      <Name>DBUtility</Name>
     </ProjectReference>
     <ProjectReference Include="..\IDAL\IDAL.csproj">
       <Project>{838508a1-de18-4c64-8d81-eac741341dde}</Project>

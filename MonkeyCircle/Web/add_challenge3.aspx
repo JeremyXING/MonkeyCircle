@@ -52,7 +52,7 @@
 
 </style></head>
 <body>
-	
+	<form id="form1" runat="server">
 <div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
 	<div class="container">
 		<div class="navbar-header">
@@ -117,7 +117,7 @@
 				<h2 class="h2-tab">[初级]Java工程师-邀请挑战</h2>
 				<p class="text-muted">您可以邀请其他渠道获取的人才到猿圈，通过挑战来识别他们的能力。</p>
 				<p style="color:#4A90E2">猿圈小提示：每邀请一位人才将会扣除1个猿民币。</p>
-				<form id="invite_user_form" method="post" class="form-vertical bv-form" action="javascript:void(0);" enctype="multipart/form-data" novalidate="novalidate"><button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
+				<button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
 					<input id="recruit_id" name="recruitId" value="3141" type="hidden">
 					<div class="form-group" id="one">
 						<label>
@@ -160,10 +160,11 @@
 						<input id="user_emails_type" name="user_emails_type" type="hidden" value="-1">
 					</div>
 					<div class="form-group form-actions pull-right">
-						<button type="submit" class="btn btn-new1">邀请</button>
+                        <asp:Button ID="Button1" runat="server" class="btn btn-new1" Text="邀请" OnClick="Button1_Click"/>
+						
 						<a href="http://www.oxcoder.com/cooper/index.html" class="btn btn-default" style="margin-left:10px;">返回</a>
 					</div>
-				</form>
+			
 			</div>
 			<div class="col-md-3 profile-info" id="profile_info_div">
 
@@ -434,7 +435,7 @@
 
 	</script>
 
-
+        </form>
 </body>
 
 </html>

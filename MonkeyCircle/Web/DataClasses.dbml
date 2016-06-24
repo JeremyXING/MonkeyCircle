@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mc" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=HISOU-PC\TKS;Initial Catalog=mc;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="mcConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Company" Member="Company">
+    <Type Name="Company">
+      <Column Name="userId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fullName" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="shortName" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="logo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="scale" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="intro" Type="System.String" DbType="Char(200)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tags" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="contactInfo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="telephone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="industry" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="certification" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="user">
+    <Type Name="user">
+      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="userEmail" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="role" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="registerTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="loginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Coder" Member="Coder">
+    <Type Name="Coder">
+      <Column Name="userId" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="gender" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="phoneNum" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="techType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="applyState" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="workplace" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="value" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
