@@ -69,5 +69,13 @@ namespace Model
                 return this.GetTable<DoChallenge>();
             }
         }
+
+        public System.Data.Linq.Table<QuestionInfo> Questions
+        {
+            get
+            {
+                return this.GetTable<QuestionInfo>();
+            }
+        }
     }
 }

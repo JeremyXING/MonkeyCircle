@@ -1,15 +1,3 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="mc" Class="MCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=lenovo_gyf;Initial Catalog=mc;Integrated Security=True" SettingsObjectName="Model.Properties.Settings" SettingsPropertyName="mcConnectionString" Provider="System.Data.SqlClient" />
-  <Table Name="dbo.DoChallenge" Member="DoChallenges">
-    <Type Name="DoChallenge">
-      <Column Name="chanID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="userId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="acceptStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="finishStatus" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="useTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="score" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="acceptTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="finishTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
 </Database>

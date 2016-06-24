@@ -30,5 +30,11 @@ namespace DALFactory
             string className = path + ".DoChallenge";
             return (IDAL.IDoChallenge)Assembly.Load(path).CreateInstance(className);
         }
+
+        public static IDAL.IQuestion CreateQuestion()
+        {
+            string className = path + ".Question";
+            return (IDAL.IQuestion)Assembly.Load(path).CreateInstance(className);
+        }
     }
 }

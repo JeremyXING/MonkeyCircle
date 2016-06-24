@@ -23,7 +23,6 @@ namespace SQLServerDAL
 
         public void InsertCha(ChallengeInfo cha)
         {
-            StringBuilder strSQL = new StringBuilder();
             SqlParameter[] par ={
                                     new SqlParameter("@chanID",SqlDbType.Int),
                                     new SqlParameter("@chanType",SqlDbType.Int),
@@ -39,7 +38,7 @@ namespace SQLServerDAL
             par[4].Value = cha.publishTime;
             par[5].Value = cha.status;
 
-            
+            SqlHelper.ExecuteSql(SQL_INSERT_CHA,par);
         }
 
         public ChallengeInfo GetChallengeBychanID(int chanID)

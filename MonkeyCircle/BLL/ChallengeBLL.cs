@@ -15,6 +15,7 @@ namespace BLL
     {
         private static readonly IChallenge challengeDAL = DALFactory.DataAccess.CreateChallenge();
         private static readonly IPublishChallenge pcDAL = DALFactory.DataAccess.CreatePC();
+        private static readonly IQuestion qDAL = DALFactory.DataAccess.CreateQuestion();
 
         public ArrayList GetPCByUserID(int userID)
         {
@@ -41,6 +42,11 @@ namespace BLL
             cDAL.InsertCha(chaInfo);
 
             return false;
+        }
+
+        public ArrayList GetQuestionByTL(int level,int type)
+        {
+            return qDAL.GetQuestionByTandL(level, type);
         }
     }
 }

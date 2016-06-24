@@ -44,9 +44,18 @@ namespace Web
                         s += "[初级]";
                         break;
                     case 2:
-                        s += "[中级]";
+                        s += "[初级]";
                         break;
                     case 3:
+                        s += "[中级]";
+                        break;
+                    case 4:
+                        s += "[中级]";
+                        break;
+                    case 5:
+                        s += "[高级]";
+                        break;
+                    case 6:
                         s += "[高级]";
                         break;
                 }
@@ -57,10 +66,22 @@ namespace Web
                         s += "JAVA工程师";
                         break;
                     case 2:
-                        s += "C/C++工程师";
+                        s += "Android工程师";
                         break;
                     case 3:
+                        s += "IOS工程师";
+                        break;
+                    case 4:
+                        s += "C语言工程师";
+                        break;
+                    case 5:
+                        s += "C++工程师";
+                        break;
+                    case 6:
                         s += "PHP工程师";
+                        break;
+                    case 7:
+                        s += "Python工程师";
                         break;
                 }
 
