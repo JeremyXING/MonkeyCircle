@@ -1,11 +1,14 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+<<<<<<< HEAD
 using BLL;
 using Model;
+=======
+>>>>>>> 719335d4d79572da20441227b3031528ac933298
 
 namespace Web
 {
@@ -13,6 +16,7 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             //根据type和level判断要有哪些题
             int level = Convert.ToInt32(Request.Form["relevel"]);
             int type = Convert.ToInt32(Request.Form["retype"]);
@@ -73,6 +77,9 @@ namespace Web
 
             quizBoard.InnerHtml = s;
             Page.DataBind();
+=======
+
+>>>>>>> 719335d4d79572da20441227b3031528ac933298
         }
 
     }

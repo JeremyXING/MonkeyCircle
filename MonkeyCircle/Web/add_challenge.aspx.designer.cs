@@ -10,6 +10,7 @@
 namespace Web {
     
     
+<<<<<<< HEAD
     public partial class add_challenge2 {
         
         /// <summary>
@@ -101,5 +102,8 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl quizBoard;
+=======
+    public partial class add_challenge {
+>>>>>>> 719335d4d79572da20441227b3031528ac933298
     }
 }

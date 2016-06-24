@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IChallenge.cs" />
-    <Compile Include="IDoChallenge.cs" />
+    <Compile Include="ICompany.cs" />
     <Compile Include="IPublishChallenge.cs" />
     <Compile Include="IQuestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,23 +11,5 @@ namespace Web {
     
     
     public partial class company_challenge_filter {
-        
-        /// <summary>
-        /// titleDIV control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl titleDIV;
-        
-        /// <summary>
-        /// timeSpan control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl timeSpan;
     }
 }

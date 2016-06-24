@@ -104,45 +104,78 @@
 			<div class="col-md-8 col-no-left-padding col-md-offset-2">
 				<section class="middle">
 					<div class="col-md-2 col-no-left-padding" style="margin-bottom:10px;">
-						<select onchange="onSelectChange()" id="directions_id" class="form-control">
-							<option value="0">技术方向</option>
-							
-								<option value="1">Java</option>
-							
-								<option value="2">Android</option>
-							
-								<option value="3">iOS</option>
-							
-								<option value="4">C语言(beta)</option>
-							
-								<option value="5">C++(beta)</option>
-							
-								<option value="6">php(beta)</option>
-							
-								<option value="7">Python(beta)</option>
-							
-						</select>
+                  
+                        <asp:DropDownList runat="server" id="TechSelectDropDownList" class="form-control" AutoPostBack="True"
+                            OnSelectedIndexChanged="TechSelectChanged">
+
+                            <asp:ListItem> 技术方向 </asp:ListItem>
+                            <asp:ListItem> Java </asp:ListItem>
+                            <asp:ListItem> Android </asp:ListItem>
+                            <asp:ListItem> iOS </asp:ListItem>
+                            <asp:ListItem> C语言 </asp:ListItem>
+                            <asp:ListItem> C++</asp:ListItem>
+                            <asp:ListItem> php </asp:ListItem>
+                            <asp:ListItem> Python </asp:ListItem>
+
+                        </asp:DropDownList>
 					</div>
 					<div class="col-md-2 col-no-left-padding" style="margin-bottom:10px;">
-						<select onchange="onSelectChange()" id="level_id" class="form-control">
-							<option value="0">起始薪资</option>
-							
-								<option value="1">2K~5K</option>
-							
-								<option value="2">5K~8K</option>
-							
-								<option value="3">8K~10K</option>
-							
-								<option value="4">10K~12K</option>
-							
-								<option value="5">12K~15K</option>
-							
-								<option value="6">15K以上</option>
-							
-						</select>
+                  
+                        <asp:DropDownList runat="server" id="PaySelectDropDownList" class="form-control" AutoPostBack="True"
+                            OnSelectedIndexChanged="PaySelectChanged">
+
+                            <asp:ListItem>起始薪资</asp:ListItem>
+                            <asp:ListItem>2K~5K</asp:ListItem>
+                            <asp:ListItem>5K~8K</asp:ListItem>
+                            <asp:ListItem>8K~10K</asp:ListItem>
+                            <asp:ListItem>10K~12K</asp:ListItem>
+                            <asp:ListItem>12K~15K</asp:ListItem>
+                            <asp:ListItem>15K以上</asp:ListItem>
+
+                        </asp:DropDownList>
 					</div>
 					<div class="col-md-2 col-no-left-padding" id="warp" style="margin-bottom:10px;">
-						<select onchange="onSelectChange()" id="province_id" class="form-control prov"><option value="0">全部地区</option><option value="北京市">北京市</option><option value="天津市">天津市</option><option value="河北省">河北省</option><option value="山西省">山西省</option><option value="内蒙古">内蒙古</option><option value="辽宁省">辽宁省</option><option value="吉林省">吉林省</option><option value="黑龙江省">黑龙江省</option><option value="上海市">上海市</option><option value="江苏省">江苏省</option><option value="浙江省">浙江省</option><option value="安徽省">安徽省</option><option value="福建省">福建省</option><option value="江西省">江西省</option><option value="山东省">山东省</option><option value="河南省">河南省</option><option value="湖北省">湖北省</option><option value="湖南省">湖南省</option><option value="广东省">广东省</option><option value="广西省">广西省</option><option value="海南省">海南省</option><option value="重庆市">重庆市</option><option value="四川省">四川省</option><option value="贵州省">贵州省</option><option value="云南省">云南省</option><option value="西藏">西藏</option><option value="陕西省">陕西省</option><option value="甘肃省">甘肃省</option><option value="青海省">青海省</option><option value="宁夏">宁夏</option><option value="新疆">新疆</option><option value="香港">香港</option><option value="澳门">澳门</option><option value="台湾">台湾</option></select>
+                        <asp:DropDownList ID="AreaSelectDropDownList" class="form-control" runat="server" AutoPostBack="True"
+                            OnSelectedIndexChanged="AreaSelectChanged">
+
+                            <asp:ListItem>全部地区</asp:ListItem>
+                            <asp:ListItem>北京市</asp:ListItem>
+                            <asp:ListItem>天津市</asp:ListItem>
+                            <asp:ListItem>河北省</asp:ListItem>
+                            <asp:ListItem>陕西省</asp:ListItem>
+                            <asp:ListItem>内蒙古</asp:ListItem>
+                            <asp:ListItem>辽宁省</asp:ListItem>
+                            <asp:ListItem>吉林省</asp:ListItem>
+                            <asp:ListItem>黑龙江省</asp:ListItem>
+                            <asp:ListItem>上海市</asp:ListItem>
+                            <asp:ListItem>江苏省</asp:ListItem>
+                            <asp:ListItem>浙江省</asp:ListItem>
+                            <asp:ListItem>安徽省</asp:ListItem>
+                            <asp:ListItem>福建省</asp:ListItem>
+                            <asp:ListItem>江西省</asp:ListItem>
+                            <asp:ListItem>山东省</asp:ListItem>
+                            <asp:ListItem>河南省</asp:ListItem>
+                            <asp:ListItem>湖北省</asp:ListItem>
+                            <asp:ListItem>湖南省</asp:ListItem>
+                            <asp:ListItem>广东省</asp:ListItem>
+                            <asp:ListItem>广西省</asp:ListItem>
+                            <asp:ListItem>海南省</asp:ListItem>
+                            <asp:ListItem>重庆市</asp:ListItem>
+                            <asp:ListItem>四川省</asp:ListItem>
+                            <asp:ListItem>贵州省</asp:ListItem>
+                            <asp:ListItem>云南省</asp:ListItem>
+                            <asp:ListItem>西藏</asp:ListItem>
+                            <asp:ListItem>陕西省</asp:ListItem>
+                            <asp:ListItem>甘肃省</asp:ListItem>
+                            <asp:ListItem>青海省</asp:ListItem>
+                            <asp:ListItem>宁夏</asp:ListItem>
+                            <asp:ListItem>新疆</asp:ListItem>
+                            <asp:ListItem>香港</asp:ListItem>
+                            <asp:ListItem>澳门</asp:ListItem>
+                            <asp:ListItem>台湾</asp:ListItem>
+
+                        </asp:DropDownList>
+                       
 						<div style="display: none">
 							<select class="form-control city" style="display:none"></select>
 							<select class="form-control dist" style="display:none"></select>
@@ -150,12 +183,16 @@
 					</div>
 					<div style="col-md-6">
 						<div class="input-group">
-							<input onchange="" value="" id="keyWords_id" class="form-control" placeholder="请输入关键词，如公司名称等"/>
-							<span class="input-group-btn">
-								<button onclick="onSelectChange(this)" type="button" class="btn">
-									<i class="fa fa-search"></i>
-								</button>
+                            <asp:TextBox ID="keyWords_id" runat="server" class="form-control" placeholder="请输入关键词，如公司名称等">
+
+
+                            </asp:TextBox>
+                            <span class="input-group-btn">
+                                <asp:Button ID="search" runat="server" Text="Button" 
+                                    class="fa fa-search" OnClick="search_Click"/>
+                                
 							</span>
+
 						</div>
 					</div>
 				</section>
@@ -163,12 +200,20 @@
 			<div class="col-md-4 col-no-left-padding col-md-offset-8" style="margin-top:10px;">
 				<section id="middle" style="margin-bottom:20px;">
 					排序：
-					<a href="javascript:void(0)" onclick="onSelectChange(this,0)" class="btn btn-order ">时间</a>
-					<a href="javascript:void(0)" onclick="onSelectChange(this,1)" class="btn btn-order ">热度</a>
-					<a href="javascript:void(0)" onclick="onSelectChange(this,2)" class="btn btn-order ">薪资</a>
+                    <asp:HyperLink ID="HyperLink1" href="javascript:void(0)" onclick="onSelectChange(this,0)" class="btn btn-order " runat="server">时间</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink2" href="javascript:void(0)" onclick="onSelectChange(this,1)" class="btn btn-order " runat="server">热度</asp:HyperLink>
+                    <asp:HyperLink ID="HyperLink3" href="javascript:void(0)" onclick="onSelectChange(this,2)" class="btn btn-order " runat="server">薪资</asp:HyperLink>
 				</section>
 			</div>
-			<div class="col-md-12" id="cplb_main" scrollpagination="enabled">
+
+
+            <asp:Repeater ID="Repeater1" runat="server">
+                 <ItemTemplate>  
+                     <asp:Label ID="Label1" runat="server" Text="Label">啊啊啊啊</asp:Label>
+                 </ItemTemplate>
+            </asp:Repeater>
+
+			<div runat="server" class="col-md-12" id="cplb_main" scrollpagination="enabled">
 				
 					<div class="col-xs-12 col-md-4 col-lg-3">
 						<section id="middle">
@@ -249,155 +294,7 @@
 							</div>
 						</section>
 					</div>
-				
-					<div class="col-xs-12 col-md-4 col-lg-3">
-						<section id="middle">
-							<div class="panel panel-default shadow-effect">
-								<div class="col-xs-12 panel-header">
-									<div class="pull-left">
-										<h4 class="line-control">
-											<a href="http://www.oxcoder.com/user/view_recruit_detail.html?recruitId=3054">[中级]iOS工程师</a>
-										</h4>
-										<h4 class="line-control" style="min-height:18px;">
-											<a href="http://www.oxcoder.com/user/cooper_info.html?cooperId=162">海量信息</a>
-										</h4>
-									</div>
-									<div class="pull-right client-info hidden-md">
-										<span class="percent text-danger">
-											<img class="img-circle" style="width:60px;height:60px" src="./image/eeabdb21-0363-4094-860f-c8142b40d143.png">
-										</span>
-									</div>
-									
-								</div>
 	
-								<div class="panel-body ">
-									<ul class="list-unstyled">
-										<li>月薪： 
-											
-											10K~12K
-										</li>
-										<li>职位诱惑：</li>
-										<li style="min-height:33px;">
-											<ul class="companyTags">
-												
-												
-													<li>大数据</li>
-												
-													<li>顶级风投</li>
-												
-													<li>内部创业</li>
-												
-											</ul>
-										</li>
-										<li>试题数量：3</li>
-										<li>
-											挑战难度：
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-										</li>
-										<li>
-											<i class="fa fa-calendar"></i>
-											2016.03.14~2016.05.14
-										</li>
-										<li>
-											<i class="fa fa-user"></i>
-											968人已接受挑战
-										</li>
-									</ul>
-	
-								</div>
-								<!-- /.panel-body -->
-								<div class="panel-footer align-center">
-									<a href="http://www.oxcoder.com/user/accepted_recruit.html?recruitId=3054">
-										<button class="btn btn-new1" onclick="fdisabled(this)">接受挑战</button>
-									</a>
-								</div>
-								<!-- /.panel-footer -->
-							</div>
-						</section>
-					</div>
-				
-					<div class="col-xs-12 col-md-4 col-lg-3">
-						<section id="middle">
-							<div class="panel panel-default shadow-effect">
-								<div class="col-xs-12 panel-header">
-									<div class="pull-left">
-										<h4 class="line-control">
-											<a href="http://www.oxcoder.com/user/view_recruit_detail.html?recruitId=3069">[中级]iOS工程师</a>
-										</h4>
-										<h4 class="line-control" style="min-height:18px;">
-											<a href="http://www.oxcoder.com/user/cooper_info.html?cooperId=1343">红点科技</a>
-										</h4>
-									</div>
-									<div class="pull-right client-info hidden-md">
-										<span class="percent text-danger">
-											<img class="img-circle" style="width:60px;height:60px" src="./image/e2da2666-6c7a-418f-a9e3-0705c58766dd.png"/>
-										</span>
-									</div>
-									
-								</div>
-	
-								<div class="panel-body ">
-									<ul class="list-unstyled">
-										<li>月薪： 
-											
-											8K~10K
-										</li>
-										<li>职位诱惑：</li>
-										<li style="min-height:33px;">
-											<ul class="companyTags">
-												
-												
-													<li>五险一金</li>
-												
-													<li>扁平管理</li>
-												
-													<li>管吃管住</li>
-												
-											</ul>
-										</li>
-										<li>试题数量：3</li>
-										<li>
-											挑战难度：
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-												<i class="fa fa-star"></i>
-											
-										</li>
-										<li>
-											<i class="fa fa-calendar"></i>
-											2016.03.18~2016.05.18
-										</li>
-										<li>
-											<i class="fa fa-user"></i>
-											827人已接受挑战
-										</li>
-									</ul>
-	
-								</div>
-								<!-- /.panel-body -->
-								<div class="panel-footer align-center">
-									<a href="http://www.oxcoder.com/user/accepted_recruit.html?recruitId=3069">
-										<button class="btn btn-new1" onclick="fdisabled(this)">接受挑战</button>
-									</a>
-								</div>
-								<!-- /.panel-footer -->
-							</div>
-						</section>
-					</div>
-				
-				
-			</div>
 		</div>
 		<!-- /.row -->
 	</div>
@@ -414,9 +311,9 @@
 					<h4 class="modal-title" id="myModalLabel">意见反馈</h4>
 				</div>
 				<div class="modal-body">
-					<form class="">
+					
 						<textarea class="form-control" placeholder="请输入您的反馈意见" style="min-height:200px;"></textarea>
-					</form>
+					
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-new1">提交</button>

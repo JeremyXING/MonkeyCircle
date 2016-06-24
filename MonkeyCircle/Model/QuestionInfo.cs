@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -124,3 +125,24 @@ namespace Model
     }
 }
 
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Model
+{
+    public class QuestionInfo
+    {
+        private int qId;
+        private string qTitle;
+        private string qContent;
+        private int qType;
+        private int qLevel;
+        private int qTime;
+        private DateTime addTime;
+    }
+}
+>>>>>>> 719335d4d79572da20441227b3031528ac933298
