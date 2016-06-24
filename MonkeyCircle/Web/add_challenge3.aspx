@@ -49,7 +49,6 @@
     }
 </style>
 <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}
-
 </style></head>
 <body>
 	<form id="form1" runat="server">
@@ -117,28 +116,15 @@
 				<h2 class="h2-tab">[初级]Java工程师-邀请挑战</h2>
 				<p class="text-muted">您可以邀请其他渠道获取的人才到猿圈，通过挑战来识别他们的能力。</p>
 				<p style="color:#4A90E2">猿圈小提示：每邀请一位人才将会扣除1个猿民币。</p>
-				<button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;"></button>
-					<input id="recruit_id" name="recruitId" value="3141" type="hidden">
+                    
 					<div class="form-group" id="one">
 						<label>
 							<span class="grey">输入邮箱地址(剩余猿民币：<span id="su_resume_span_view_id">10</span>)</span>
 						</label>
-						<input type="email" name="user_emails" class="form-control" placeholder="多个邮件地址请用&#39;,&#39;分隔" data-bv-field="user_emails">
+						<input id="emails" name="user_emails" class="form-control" placeholder="多个邮件地址请用&#39;,&#39;分隔" data-bv-field="user_emails" runat="server" >
 					</div>
-					<span class="help-block has-error" id="hint_user_emails"><small class="help-block" data-bv-validator="emailAddress" data-bv-for="user_emails" data-bv-result="NOT_VALIDATED" style="display: none;">请输入正确的邮箱格式</small><small class="help-block" data-bv-validator="notEmpty" data-bv-for="user_emails" data-bv-result="NOT_VALIDATED" style="display: none;">请输入正确的邮箱格式，多个邮件地址请用','分隔</small></span>
-          
-					<div>
-						<div class="alert alert-success alert-dismissible" style="display: none;" role="alert" id="msg_tip">
-							<strong>提示:</strong>
-							<span id="msg_tip_span"></span>
-						</div>
-					</div>
+         
 					
-					<!-- 
-					<div id="tuijian_div">
-						
-					</div>
-					 -->
 					<div class="form-group">
 						<div class="col-md-12 col-no-left-padding">
 							<label>
@@ -146,7 +132,6 @@
 							</label>
 						</div>
 						<input id="email_subject_id" readonly="" type="text" name="email_subject" class="form-control" value="[北京猿圈科技有限责任公司]-在线笔试邀请函" data-bv-field="email_subject">
-						<!-- <span class="text-danger" id="error1" style="display:none;">请输入公司简称</span> -->
 						<span class="help-block has-error" id="hint_email_subject"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="email_subject" data-bv-result="NOT_VALIDATED" style="display: none;">请输入邮件主题</small></span>
 					</div>
 					<div class="form-group">
@@ -156,15 +141,12 @@
 						<textarea readonly="" name="email_content" rows="9" class="form-control" data-bv-field="email_content">您好：&lt;br&gt;我们非常高兴的通知您，通过了我们的简历筛选，为了评估您的真实编程能力，我们准备了[职位]的在线编程挑战，希望您能完成！&lt;br&gt;点击下面的链接进入在线编程挑战: :&lt;br&gt;[链接]。&lt;br&gt;以下是您的登录信息:&lt;br&gt;用户名：[用户名]&lt;br&gt;密码[密码]&lt;br&gt;感谢您的配合！&lt;br&gt;&lt;br&gt;[公司名]&lt;br&gt;[时间]</textarea>
 						<span class="help-block has-error" id="hint_email_content"><small class="help-block" data-bv-validator="notEmpty" data-bv-for="email_content" data-bv-result="NOT_VALIDATED" style="display: none;">请输入邮件内容</small></span>
 					</div>
-					<div>
-						<input id="user_emails_type" name="user_emails_type" type="hidden" value="-1">
-					</div>
-					<div class="form-group form-actions pull-right">
+					
+					<div class=" pull-right">
                         <asp:Button ID="Button1" runat="server" class="btn btn-new1" Text="邀请" OnClick="Button1_Click"/>
 						
 						<a href="http://www.oxcoder.com/cooper/index.html" class="btn btn-default" style="margin-left:10px;">返回</a>
 					</div>
-			
 			</div>
 			<div class="col-md-3 profile-info" id="profile_info_div">
 
@@ -255,185 +237,6 @@
 	<script src="./scripts/fileinput_locale_zh.js"></script>
 	
 	<script src="./scripts/zmUtil.js"></script>
-	<script type="text/javascript">
-		function change1(val) {
-			$("#one").hide();
-			$("#two").show();
-			$("#corp-pic").fileinput({
-				showUpload: false,
-				showRemove: false,
-				browseLabel: "选择文件",
-				allowedFileExtensions: ["xls", "xlsx"],
-				showPreview:false
-			});
-		}
-		
-		// 刷新推荐用户
-		function refInviteUser(){
-			$("#tuijian_div").load("cooper/invite/user/refresh_invite_user.html?recruitId=" + 3141 + "&isRefresh=true");
-		}
-		// 邀请推荐的用户
-		function invite_user_re_btn(obj){
-			$.ajax({
-				type: "post",
-				url: "cooper/invite/user/invite_user_recommend.html",
-				data: {"userId":obj,"recruitId": $("#recruit_id").val(),"email_subject": $("#email_subject_id").val() },
-				success: function (data) {
-					data = eval('(' + data + ')');
-					if(data.su){
-						$("#msg_tip_span").html(data.msg);
-						$("#msg_tip").removeClass().addClass("alert alert-success alert-dismissible");
-						$("#msg_tip").slideDown(function(){
-							setTimeout(function(){
-								$("#msg_tip").slideUp(300);
-							},1000) ;
-						});
-						$("#tuijian_" + obj).remove();
-						$("#su_resume_span_view_id").html($Util.subtr($("#su_resume_span_view_id").html(), 1,0));
-					}else{
-						$("#msg_tip_span").html(data.msg);
-						$("#msg_tip").removeClass().addClass("alert alert-danger alert-dismissible");
-						$("#msg_tip").slideDown(function(){
-							setTimeout(function(){
-								$("#msg_tip").slideUp(300);
-							},2000) ;
-						});
-					}
-				},
-				error: function (request) {
-					$("#hint1").html(data.msg);
-					$("#hint1").show();
-				}
-			});
-		}
-		$(document).ready(function() {
-			$("#profile_info_div").load("cooper/cooper_left_info.html");
-			//$("#tuijian_div").load("cooper/invite/user/refresh_invite_user.html?recruitId=" + 3141);
-			$("#invite_user_form").bootstrapValidator({
-				message : "This value is not valid",
-				fields : {
-					user_emails : {
-						container : "#hint_user_emails",
-						validators : {
-							emailAddress : {
-								multiple : true,
-								separator : /[,]/,
-								message : "请输入正确的邮箱格式"
-							},
-							notEmpty : {
-								message : "请输入正确的邮箱格式，多个邮件地址请用','分隔"
-							}
-						}
-					},
-					emailFile : {
-						container : "#hint_emailFile",
-						validators : {
-							notEmpty : {
-								message : "请上传邮箱文件"
-							}
-						}
-					},
-					email_subject : {
-						container : "#hint_email_subject",
-						validators : {
-							notEmpty : {
-								message : "请输入邮件主题"
-							}
-						}
-					},
-					email_content : {
-						container : "#hint_email_content",
-						validators : {
-							notEmpty : {
-								message : "请输入邮件内容"
-							}
-						}
-					},
-				}
-			}).on("success.form.bv", function(e) {
-		        e.preventDefault();
-		        var $form = $(e.target);
-		        $form.data("bootstrapValidator");
-		        $("#invite_user_form").ajaxSubmit({
-					type: "post",
-					url: "cooper/invite/user/sub_invite_user.html",
-					success: function(data){
-						data = eval("(" + data + ")");
-						if(data.su){
-							$.alert({
-							    title: "提示",
-							    content: data.msg,
-							    confirmButton: "确定",
-							    confirm: function(){
-							    	location.href = data.url;
-							    },
-							    cancel: function(){
-							    	location.href = data.url;
-							    }
-							});
-						}else{
-							var html = "<small class='help-block' data-bv-validator='notEmpty' data-bv-for='cooper_licence' data-bv-result='INVALID'>"+
-							data.msg
-							+"</small>";
-							$("#hint_" + data.view_error).html(html);
-							return false;
-						}
-					}
-				});
-		    });
-		});
-		var isIE = /msie/i.test(navigator.userAgent) && !window.opera;
-		function fileChange(target, id) {
-			var fileSize = 0;
-			var filetypes = [ ".xls", ".xlsx" ];
-			var filepath = target.value;
-			var filemaxsize = 1024 * 2;//2M
-			if (filepath) {
-				var isnext = false;
-				var fileend = filepath.substring(filepath.indexOf("."));
-				if (filetypes && filetypes.length > 0) {
-					for (var i = 0; i < filetypes.length; i++) {
-						if (filetypes[i] == fileend) {
-							isnext = true;
-							break;
-						}
-					}
-				}
-				if (!isnext) {
-					alert("只能上传.xls及.xlsx文件！");
-					target.value = "";
-					return false;
-				}
-			} else {
-				return false;
-			}
-			if (isIE && !target.files) {
-				var filePath = target.value;
-				var fileSystem = new ActiveXObject("Scripting.FileSystemObject");
-				if (!fileSystem.FileExists(filePath)) {
-					alert("附件不存在，请重新输入！");
-					return false;
-				}
-				var file = fileSystem.GetFile(filePath);
-				fileSize = file.Size;
-			} else {
-				fileSize = target.files[0].size;
-			}
-
-			var size = fileSize / 1024;
-			if (size > filemaxsize) {
-				alert("附件大小不能大于" + filemaxsize / 1024 + "M！");
-				target.value = "";
-				return false;
-			}
-			if (size <= 0) {
-				alert("附件大小不能为0M！");
-				target.value = "";
-				return false;
-			}
-		}
-
-	</script>
 
         </form>
 </body>
