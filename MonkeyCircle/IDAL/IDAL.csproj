@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="IChallenge.cs" />
     <Compile Include="ICompany.cs" />
+    <Compile Include="IIncome.cs" />
     <Compile Include="IPublishChallenge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

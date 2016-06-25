@@ -9,6 +9,7 @@ namespace IDAL
 {
     public interface ICompany
     {
-        List<CompanyInfo> GetCompanyInfoBylocation(String location);
+        int GetMoneyByID(int userId);
+        int setMoneyByID(int userId,int money);
     }
 }

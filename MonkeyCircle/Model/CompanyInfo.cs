@@ -34,6 +34,8 @@ namespace Model
 
         private string _certification;
 
+        private int _money;
+
         public CompanyInfo()
         {
         }
@@ -226,6 +228,22 @@ namespace Model
                 if ((this._certification != value))
                 {
                     this._certification = value;
+                }
+            }
+        }
+
+        [global::System.Data.Linq.Mapping.ColumnAttribute(Storage = "_money", DbType = "Int NOT NULL")]
+        public int money
+        {
+            get
+            {
+                return this._money;
+            }
+            set
+            {
+                if ((this._money != value))
+                {
+                    this._money = value;
                 }
             }
         }

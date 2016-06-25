@@ -77,6 +77,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -84,16 +85,14 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="add_challenge.aspx" />
@@ -104,14 +103,10 @@
     <Content Include="IndividualIndex.aspx" />
     <Content Include="individual_challenge_details.aspx" />
     <Content Include="individual_challenge_management.aspx" />
+    <Content Include="invoice_Information.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="DataClasses.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>DataClasses.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -124,6 +119,7 @@
     <Content Include="companyIndex.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="select_plan.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -171,11 +167,6 @@
     <Compile Include="company_challenge_management.aspx.designer.cs">
       <DependentUpon>company_challenge_management.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataClasses.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataClasses.dbml</DependentUpon>
-    </Compile>
     <Compile Include="IndividualIndex.aspx.cs">
       <DependentUpon>IndividualIndex.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -197,7 +188,21 @@
     <Compile Include="individual_challenge_management.aspx.designer.cs">
       <DependentUpon>individual_challenge_management.aspx</DependentUpon>
     </Compile>
+    <Compile Include="invoice_Information.aspx.cs">
+      <DependentUpon>invoice_Information.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="invoice_Information.aspx.designer.cs">
+      <DependentUpon>invoice_Information.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="select_plan.aspx.cs">
+      <DependentUpon>select_plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="select_plan.aspx.designer.cs">
+      <DependentUpon>select_plan.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -222,11 +227,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="js\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="DataClasses.dbml.layout">
-      <DependentUpon>DataClasses.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

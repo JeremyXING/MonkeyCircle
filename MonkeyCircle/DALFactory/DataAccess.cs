@@ -30,5 +30,11 @@ namespace DALFactory
             string className = path + ".Company";
             return (IDAL.ICompany)Assembly.Load(path).CreateInstance(className);
         }
+
+        public static IDAL.IIncome CreateIncome()
+        {
+            string classname = path + ".Income";
+            return (IDAL.IIncome)Assembly.Load(path).CreateInstance(classname);
+        }
     }
 }

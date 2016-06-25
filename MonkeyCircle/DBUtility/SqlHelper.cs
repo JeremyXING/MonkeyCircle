@@ -9,7 +9,7 @@ namespace DBUtility
 {
     public abstract class SqlHelper
     {
-        public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["SQLConnString"].ConnectionString;
+        public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["masterConnectionString"].ConnectionString;
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
 
         public static int ExecuteSql(string SQLString)

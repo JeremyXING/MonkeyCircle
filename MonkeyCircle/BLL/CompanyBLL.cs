@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model;
-using IDAL;
-using DALFactory;
-using SQLServerDAL;
-using System.Collections;
+﻿using IDAL;
 
 namespace BLL
 {
     public class CompanyBLL
     {
         private static readonly ICompany companyDAL = DALFactory.DataAccess.CreateCompany();
-        public List<CompanyInfo> GetCompanyInfoBylocation(String location)
+        public int GetMoneyByID(int userId)
         {
-            return companyDAL.GetCompanyInfoBylocation(location);
+            return companyDAL.GetMoneyByID(userId);
+        }
+
+        public int setMoneyByID(int userId,int money)
+        {
+           return companyDAL.setMoneyByID(userId,money);
         }
     }
 }

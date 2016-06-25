@@ -7,17 +7,19 @@ using Model;
 using DBUtility;
 using System.Data;
 using System.Data.SqlClient;
+using IDAL;
 
 namespace SQLServerDAL
 {
-    public class Company
+    public class Company:ICompany
     {
-        public List<CompanyInfo> GetCompanyBylocation(String location)
+        public int GetMoneyByID(int userId)
         {
-            String SQL = "SELECT userId,fullName,shortName,logo,scale,intro, location, tags, contactInfo, telephone, industry, certification FROM company WHERE location=@location";
+            String SQL = "SELECT money FROM company WHERE userId=@userId";
+            int money = 0;
             List<CompanyInfo> comList = new List<CompanyInfo>();
             SqlParameter[] parm = { 
-                                      new SqlParameter("@location", location),                                  
+                                      new SqlParameter("@userId", userId),                                  
                                   };
 
             //parm.Value = Type;
@@ -27,25 +29,22 @@ namespace SQLServerDAL
 
                 while (rdr.Read())
                 {
-                    CompanyInfo com = new CompanyInfo();
-                    com.userId = rdr.GetInt32(0);
-                    com.fullName = rdr.GetString(1);
-                    com.shortName = rdr.GetString(2);
-                    com.logo = rdr.GetString(3);
-                    com.scale = rdr.GetInt32(4);
-                    com.intro = rdr.GetString(5);
-                    com.location = rdr.GetString(6);
-                    com.tags = rdr.GetString(7);
-                    com.contactInfo = rdr.GetString(8);
-                    com.telephone = rdr.GetString(10);
-                    com.certification = rdr.GetString(11);
-
-                    comList.Add(com);
+                    
+                  money= rdr.GetInt32(0);
                 }
             }
 
-            return comList;
+            return money;
 
+        }
+
+        
+
+        public int setMoneyByID(int userId,int money)
+        {
+            String SQL = "UPDATE company SET money=@money WHERE userId=@userId";
+            SqlHelper.ExecuteSql(SQL);
+            return 1;
         }
     }
 }
