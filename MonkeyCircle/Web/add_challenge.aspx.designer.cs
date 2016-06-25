@@ -7,12 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Web {
-    
-    
-<<<<<<< HEAD
-    public partial class add_challenge2 {
-        
+namespace Web
+{
+    public partial class add_challenge2
+    {
+
         /// <summary>
         /// level control.
         /// </summary>
@@ -21,7 +20,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden level;
-        
+
         /// <summary>
         /// type control.
         /// </summary>
@@ -30,7 +29,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden type;
-        
+
         /// <summary>
         /// quiz_fi control.
         /// </summary>
@@ -39,7 +38,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden quiz_fi;
-        
+
         /// <summary>
         /// quiz_se control.
         /// </summary>
@@ -48,7 +47,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden quiz_se;
-        
+
         /// <summary>
         /// quiz_th control.
         /// </summary>
@@ -57,7 +56,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden quiz_th;
-        
+
         /// <summary>
         /// chosenQuiz control.
         /// </summary>
@@ -66,7 +65,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl chosenQuiz;
-        
+
         /// <summary>
         /// addbtn control.
         /// </summary>
@@ -75,7 +74,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl addbtn;
-        
+
         /// <summary>
         /// wrongTip control.
         /// </summary>
@@ -84,7 +83,7 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl wrongTip;
-        
+
         /// <summary>
         /// rightTip control.
         /// </summary>
@@ -93,7 +92,61 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl rightTip;
-        
+
+        /// <summary>
+        /// levelTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox levelTB;
+
+        /// <summary>
+        /// typeTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox typeTB;
+
+        /// <summary>
+        /// publicTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox publicTB;
+
+        /// <summary>
+        /// questionTB1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox questionTB1;
+
+        /// <summary>
+        /// questionTB2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox questionTB2;
+
+        /// <summary>
+        /// questionTB3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox questionTB3;
+
         /// <summary>
         /// quizBoard control.
         /// </summary>
@@ -102,8 +155,6 @@ namespace Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl quizBoard;
-=======
-    public partial class add_challenge {
->>>>>>> 719335d4d79572da20441227b3031528ac933298
+
     }
 }

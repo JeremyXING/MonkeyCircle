@@ -12,7 +12,5 @@
 namespace Model
 {
 	
-		
-		
 }
 #pragma warning restore 1591

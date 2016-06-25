@@ -28,7 +28,7 @@ namespace BLL
             return challengeDAL.GetChallengeBychanID(chanID);
         }
 
-        public bool PublishChallenge(int type,int salary,bool open)
+        public int PublishChallenge(int type,int salary,bool open,int userID)
         {
             IChallenge cDAL = new Challenge();
             ChallengeInfo chaInfo = new ChallengeInfo();
@@ -42,51 +42,54 @@ namespace BLL
 
             cDAL.InsertCha(chaInfo);
 
-            return false;
+            publishChallengeInfo pcInfo = new publishChallengeInfo();
+            IPublishChallenge cpcDAL = new publishChallenge();
+            pcInfo.chanID = cDAL.GetMaxChanID();
+            pcInfo.userId = userID;
+            pcInfo.publishTime = chaInfo.publishTime;
+
+            cpcDAL.InsertPCInfo(pcInfo);
+
+            return pcInfo.chanID;
         }
 
         public ArrayList GetQuestionByTL(int level,int type)
         {
             return qDAL.GetQuestionByTandL(level, type);
         }
-    }
-}
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.SqlClient;
-using System.Threading.Tasks;
-using Model;
-using IDAL;
-using DALFactory;
-using SQLServerDAL;
-using DBUtility;
-using System.Collections;
 
-namespace BLL
-{
-    public class ChallengeBLL
-    {
-        private static readonly IChallenge challengeDAL = DALFactory.DataAccess.CreateChallenge();
-        private static readonly IPublishChallenge pcDAL = DALFactory.DataAccess.CreatePC();
-
-        public ArrayList GetPCByUserID(int userID)
+        public bool addQuestion(int chanID,int q1,int q2,int q3)
         {
-            return pcDAL.GetPCByUserID(userID);
-        }
+            IAddQuestion iqDAL = new addQuestion();
+            addQuestionInfo aqInfo = new addQuestionInfo();
 
-        public ChallengeInfo GetChallengeByChanID(int chanID)
-        {
-            // Return the order from the DAL
-            return challengeDAL.GetChallengeBychanID(chanID);
-        }
+            if(q1 !=0)
+            {
+                aqInfo.chanID = chanID;
+                aqInfo.qId = q1;
+                aqInfo.addTime = DateTime.Now;
 
-        public SqlDataReader GetChallengeByCodition(int Type, int salary, String location)
-        {
-            return challengeDAL.GetChallengeByCondition(Type, salary, location);
+                iqDAL.InsertAddQ(aqInfo);
+            }
+            if (q2 != 0)
+            {
+                aqInfo.chanID = chanID;
+                aqInfo.qId = q2;
+                aqInfo.addTime = DateTime.Now;
+
+                iqDAL.InsertAddQ(aqInfo);
+            }
+            if (q3 != 0)
+            {
+                aqInfo.chanID = chanID;
+                aqInfo.qId = q3;
+                aqInfo.addTime = DateTime.Now;
+
+                iqDAL.InsertAddQ(aqInfo);
+            }
+
+
+            return true;
         }
     }
 }
->>>>>>> 719335d4d79572da20441227b3031528ac933298

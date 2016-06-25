@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAddQuestion.cs" />
     <Compile Include="IChallenge.cs" />
     <Compile Include="ICompany.cs" />
     <Compile Include="IPublishChallenge.cs" />
