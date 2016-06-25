@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -78,7 +78,6 @@ namespace Web
 
             quizBoard.InnerHtml = s;
             //Page.DataBind();
-
         }
         protected void publish(object sender, EventArgs e)
         {

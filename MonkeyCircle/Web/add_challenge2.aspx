@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="add_challenge2.aspx.cs" Inherits="Web.add_challenge2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="add_challenge.aspx.cs" Inherits="Web.add_challenge2" %>
 
 <!DOCTYPE html>
 
@@ -21,8 +21,8 @@
 <link href="./css/style.css" rel="stylesheet" type="text/css"/>
 <link rel="stylesheet" href="./css/jquery-confirm.min.css"/>
 <link href="./css/style_new.css" rel="stylesheet" type="text/css"/>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<script src="./scripts/html5shiv.js"></script>
+<script src="./scripts/respond.min.js"></script>
 
 <style type="text/css">
 .companyTags li {
@@ -34,64 +34,68 @@
 
 </style></head>
 <body>
+    <input id="level" name="level" type="hidden" value="0" runat="server" />
+    <input id="type" name="type" type="hidden" value="0" runat="server" />
+    <input id="quiz_fi" name="quiz_fi" type="hidden" value="0" runat="server" />
+    <input id="quiz_se" name="quiz_se" type="hidden" value="0" runat="server" />
+    <input id="quiz_th" name="quiz_th" type="hidden" value="0" runat="server" />
+    <script type="text/javascript">
+        function validateSession() {
+            var k = 2
+            if (k == null) {
+                location.replace("session-timeout-log.htm");
+            }
+        }
+    </script>
 	
 	
-<div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
-	<div class="container">
-		<div class="navbar-header">
-			<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand hidden-sm" href="http://www.oxcoder.com/cooper/index.html" style="padding: 0;">
-				<img src="./image/wlogo_sm.png" style="max-height: 35px;margin:7px;">
-			</a>
-		</div>
-		<div class="navbar-collapse collapse" role="navigation">
-			<ul class="nav navbar-nav">
-				<li class="">
-					<a href="http://www.oxcoder.com/cooper/oxcoder_corp_index.html">首页</a>
-				</li>
-				<li class="">
-					<a href="http://www.oxcoder.com/cooper/recommended/talent/index.html">人才推荐</a>
-				</li>
-				<li class="active">
-					<a href="http://www.oxcoder.com/cooper/index.html">挑战管理</a>
-				</li>
-			</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="text">
-							
-											
-								
-									北京猿圈科技有限责任公司
-								
-							
-						</span>
-						<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu">
-						<li>
-							<a href="http://www.oxcoder.com/cooper/pay/view_balance.html">去打赏</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/cooper/cooperInfo/view_cooper_info.html">企业信息</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/cooper/cooperInfo/account_binding.html">帐号设置</a>
-						</li>
-						<li>
-							<a href="http://www.oxcoder.com/security_logout">注销</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
+    <div class="navbar navbar-default navbar-fixed-top" onload="validateSession()">
+	    <div class="container">
+		    <div class="navbar-header">
+			    <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+			    </button>
+			    <a class="navbar-brand hidden-sm" href="./companyIndex.aspx" style="padding: 0;">
+				    <img src="./image/wlogo_sm.png" style="max-height: 35px;margin:7px;"/>
+			    </a>
+		    </div>
+		    <div class="navbar-collapse collapse" role="navigation">
+			    <ul class="nav navbar-nav">
+				    <li class="">
+					    <a href="./companyIndex.aspx">首页</a>
+				    </li>
+				    <li class="active">
+					    <a href="./company_challenge_management.aspx">挑战管理</a>
+				    </li>
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">
+				    <li class="dropdown">
+					    <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						    <span class="text">北京猿圈科技有限责任公司</span>
+						    <b class="caret"></b>
+					    </a>
+					    <ul class="dropdown-menu">
+						    <li>
+							    <a href="http://www.oxcoder.com/cooper/pay/view_balance.html">去打赏</a>
+						    </li>
+						    <li>
+							    <a href="http://www.oxcoder.com/cooper/cooperInfo/view_cooper_info.html">企业信息</a>
+						    </li>
+						    <li>
+							    <a href="http://www.oxcoder.com/cooper/cooperInfo/account_binding.html">帐号设置</a>
+						    </li>
+						    <li>
+							    <a href="http://www.oxcoder.com/security_logout">注销</a>
+						    </li>
+					    </ul>
+				    </li>
+			    </ul>
+		    </div>
+	    </div>
+    </div>
+
     <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -213,7 +217,10 @@
                             </div>
                         </div>
                     </section>
+			</div>
 		</div>
+    </div>
+	<!-- /.container -->
 	<footer id="footer">
 	</footer>
 	<script src="./scripts/jquery-1.11.0.min.js"></script>
@@ -224,7 +231,6 @@
 	<script src="./scripts/bootstrap-filestyle.js"></script>
 	<script src="./scripts/summernote.min.js"></script>
 	<script src="./scripts/script.js"></script>
-	
 	<script type="text/javascript" src="./scripts/jquery-confirm.min.js"></script>
 	
 	<script src="./scripts/zmUtil.js"></script>
