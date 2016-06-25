@@ -27,9 +27,9 @@ namespace SQLServerDAL
                                     new SqlParameter("@chanID",SqlDbType.Int),
                                     new SqlParameter("@chanType",SqlDbType.Int),
                                     new SqlParameter("@salary",SqlDbType.Int),
-                                    new SqlParameter("@open",SqlDbType.Int),
-                                    new SqlParameter("@publishTime",SqlDbType.Int),
-                                    new SqlParameter("@status",SqlDbType.Int),
+                                    new SqlParameter("@open",SqlDbType.Bit),
+                                    new SqlParameter("@publishTime",SqlDbType.DateTime),
+                                    new SqlParameter("@status",SqlDbType.Bit)
                                 };
             par[0].Value = cha.chanID;
             par[1].Value = cha.chanType;

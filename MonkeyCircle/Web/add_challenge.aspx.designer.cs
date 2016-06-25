@@ -94,6 +94,60 @@ namespace Web {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl rightTip;
         
         /// <summary>
+        /// levelTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox levelTB;
+        
+        /// <summary>
+        /// typeTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox typeTB;
+        
+        /// <summary>
+        /// publicTB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox publicTB;
+        
+        /// <summary>
+        /// questionTB1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox questionTB1;
+        
+        /// <summary>
+        /// questionTB2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox questionTB2;
+        
+        /// <summary>
+        /// questionTB3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox questionTB3;
+        
+        /// <summary>
         /// quizBoard control.
         /// </summary>
         /// <remarks>

@@ -93,7 +93,7 @@ namespace Web
 
                 s += "<div class=\"col-md-2\"><ul class=\"list-unstyled\" style=\"margin: 20px 0;\"><li><span class=\"red\">"+percent+"</span>%已合格</li></ul></div>";
 
-                s += "<div class=\"col-md-3\"><a href=\".\a.htm\" ><button class=\"btn btn-new1\">去筛选</button></a>";
+                s += "<div class=\"col-md-3\"><a href=\".\a.htm\" ><button class=\"btn btn-new1\" onclick=\"./company_challenge_filter.aspx\">去筛选</button></a>";
                 s += "<a href = \".\a.htm\" ><button class=\"btn btn-new1\" style=\"margin: 16px 5px;\" >邀请</button></a></div>";
                 
                 s += "</div></div></div>";

@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addQuestion.cs" />
     <Compile Include="Challenge.cs" />
     <Compile Include="DoChallenge.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

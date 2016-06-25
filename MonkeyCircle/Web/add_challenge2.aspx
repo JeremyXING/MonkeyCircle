@@ -133,11 +133,14 @@
                                                 <h4 class="pull-left">挑战项目</h4>
                                                 <div class="pull-right">
                                                     <div style="display: inline-block; vertical-align: top;">
-                                                        <form class="input-group" style="width: 200px" action="hr-set-challenge.action" method="post">
-                                                            <input type="hidden" name="relevel" value="1" id="input-relevel"/>
-                                                            <input type="hidden" name="retype" value="0" id="input-retype"/>
-                                                            <input type="hidden" name="republic" value="1" id="input-republic"/>
-                                                            <button class="btn btn-new1 pull-right">发布挑战</button>
+                                                        <form class="input-group" style="width: 200px"  runat="server">
+                                                            <asp:TextBox  style="display:none" id="levelTB" runat="server"></asp:TextBox>
+                                                            <asp:TextBox  style="display:none" id="typeTB" runat="server"></asp:TextBox>
+                                                            <asp:TextBox  style="display:none" id="publicTB" runat="server"></asp:TextBox>
+                                                            <asp:TextBox  style="display:none" id="questionTB1" runat="server" Text="0"></asp:TextBox>
+                                                            <asp:TextBox  style="display:none" id="questionTB2" runat="server" Text="0"></asp:TextBox>
+                                                            <asp:TextBox  style="display:none" id="questionTB3" runat="server" Text="0"></asp:TextBox>
+                                                            <asp:Button class="btn btn-new1 pull-right" runat="server" Text="发布挑战" OnClick="publish"></asp:Button>
                                                         </form>
                                                     </div>
                                                 </div>
@@ -313,12 +316,26 @@
 			});
 		}
 
-		function add(title)
+		function add(id)
 		{
-		    //alert(id);
+		    var qtb1 = document.getElementById('<%=questionTB1.ClientID%>');
+		    var qtb2 = document.getElementById('<%=questionTB2.ClientID%>');
+		    var qtb3 = document.getElementById('<%=questionTB3.ClientID%>');
 		    var content = document.getElementById("addbtn");
-		    content.innerHTML = title;
-		    alert(title);
+
+		    if (qtb1.value == 0)
+		    {
+		        content.innerHTML = "选择" + id + "号题";
+		        qtb1.value = id;
+		    } else if (qtb2.value == 0){
+		        content.innerHTML += "、选择" + id + "号题";
+		        qtb2.value = id;
+		    } else {
+		        content.innerHTML += "、选择" + id + "号题";
+		        qtb3.value = id;
+		    }
+
+
 		}
 	</script>
 

@@ -77,5 +77,61 @@ namespace Model
                 return this.GetTable<QuestionInfo>();
             }
         }
+
+        public System.Data.Linq.Table<addQuestionInfo> addQuestions
+        {
+            get
+            {
+                return this.GetTable<addQuestionInfo>();
+            }
+        }
+
+        public System.Data.Linq.Table<CoderInfo> Coder
+        {
+            get
+            {
+                return this.GetTable<CoderInfo>();
+            }
+        }
+
+        public System.Data.Linq.Table<CompanyInfo> Companies
+        {
+            get
+            {
+                return this.GetTable<CompanyInfo>();
+            }
+        }
+
+        public System.Data.Linq.Table<incomeInfo> incomes
+        {
+            get
+            {
+                return this.GetTable<incomeInfo>();
+            }
+        }
+
+        public System.Data.Linq.Table<invitation> invitations
+        {
+            get
+            {
+                return this.GetTable<invitation>();
+            }
+        }
+
+        public System.Data.Linq.Table<Plan> Plans
+        {
+            get
+            {
+                return this.GetTable<Plan>();
+            }
+        }
+
+        public System.Data.Linq.Table<user> users
+        {
+            get
+            {
+                return this.GetTable<user>();
+            }
+        }
     }
 }

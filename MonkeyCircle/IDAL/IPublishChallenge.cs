@@ -11,5 +11,7 @@ namespace IDAL
     public interface IPublishChallenge
     {
         ArrayList GetPCByUserID(int userID);
+
+        void InsertPCInfo(publishChallengeInfo pcInfo);
     }
 }
