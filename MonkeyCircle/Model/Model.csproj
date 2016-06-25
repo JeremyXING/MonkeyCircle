@@ -69,7 +69,11 @@
     </Compile>
     <Compile Include="publishChallengeInfo.cs" />
     <Compile Include="QuestionInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="userInfo.cs" />
+=======
+    <Compile Include="UserInfo.cs" />
+>>>>>>> d0333da50f72effa0078c9ff7d53b97034b998ae
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

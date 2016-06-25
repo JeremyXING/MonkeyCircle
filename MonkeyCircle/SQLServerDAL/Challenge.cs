@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using IDAL;
 using DBUtility;
 using Model;
+using System.Web;
 
 namespace SQLServerDAL
 {
@@ -16,29 +17,11 @@ namespace SQLServerDAL
         private const string SQL_SELECT_CHALLENGE = "SELECT chanType,salary,[open],publishTime,status FROM challenge WHERE chanID=@chanID";
         private const string PARM_CHANLLENGE_ID = "@chanID";
 
-        //GetMaxChanID
-        private const string SQL_SELECT_MAXCHANID = "select max(chanID) from challenge";
-        //InsertCha
-        private const string SQL_INSERT_CHA = "insert into Challenge values(@chanID,@chanType,@salary,@open,@publishTime,@status)";
 
-        public void InsertCha(ChallengeInfo cha)
+        public void Insert(ChallengeInfo cha)
         {
-            SqlParameter[] par ={
-                                    new SqlParameter("@chanID",SqlDbType.Int),
-                                    new SqlParameter("@chanType",SqlDbType.Int),
-                                    new SqlParameter("@salary",SqlDbType.Int),
-                                    new SqlParameter("@open",SqlDbType.Bit),
-                                    new SqlParameter("@publishTime",SqlDbType.DateTime),
-                                    new SqlParameter("@status",SqlDbType.Bit)
-                                };
-            par[0].Value = cha.chanID;
-            par[1].Value = cha.chanType;
-            par[2].Value = cha.salary;
-            par[3].Value = cha.open;
-            par[4].Value = cha.publishTime;
-            par[5].Value = cha.status;
-
-            SqlHelper.ExecuteSql(SQL_INSERT_CHA,par);
+            StringBuilder strSQL = new StringBuilder();
+            //SqlParameter[] orderParms = GetOrderParameters();
         }
 
         public ChallengeInfo GetChallengeBychanID(int chanID)
@@ -61,20 +44,6 @@ namespace SQLServerDAL
             }
 
             return cha;
-        }
-
-        public int GetMaxChanID()
-        {
-            SqlParameter parm = new SqlParameter(PARM_CHANLLENGE_ID, SqlDbType.Int);
-            using (SqlDataReader rdr = SqlHelper.ExecuteReader(SqlHelper.ConnectionString, CommandType.Text, SQL_SELECT_MAXCHANID))
-            {
-
-                if (rdr.Read())
-                {
-                    return rdr.GetInt32(0);
-                }
-            }
-            return 0;
         }
 
         public List<ChallengeInfo> GetChallengeByCondition(int Type, int salary, String location)
