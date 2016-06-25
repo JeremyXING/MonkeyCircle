@@ -1,3 +1,4 @@
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace IDAL
     public interface IPublishChallenge
     {
         ArrayList GetPCByUserID(int userID);
+
+        void InsertPCInfo(publishChallengeInfo pcInfo);
     }
 }

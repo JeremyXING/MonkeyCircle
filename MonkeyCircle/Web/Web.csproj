@@ -98,12 +98,17 @@
     <Content Include="add_challenge.aspx" />
     <Content Include="add_challenge2.aspx" />
     <Content Include="add_challenge3.aspx" />
+    <Content Include="backend.aspx" />
     <Content Include="company_challenge_filter.aspx" />
     <Content Include="company_challenge_management.aspx" />
     <Content Include="IndividualIndex.aspx" />
     <Content Include="individual_challenge_details.aspx" />
     <Content Include="individual_challenge_management.aspx" />
+<<<<<<< HEAD
     <Content Include="invoice_Information.aspx" />
+=======
+    <Content Include="login.aspx" />
+>>>>>>> 85b885c119b6cdd6a5b52c259bcc3ec9b576b4c7
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -145,6 +150,13 @@
     </Compile>
     <Compile Include="add_challenge3.aspx.designer.cs">
       <DependentUpon>add_challenge3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backend.aspx.cs">
+      <DependentUpon>backend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backend.aspx.designer.cs">
+      <DependentUpon>backend.aspx</DependentUpon>
     </Compile>
     <Compile Include="companyIndex.aspx.cs">
       <DependentUpon>companyIndex.aspx</DependentUpon>
@@ -188,12 +200,21 @@
     <Compile Include="individual_challenge_management.aspx.designer.cs">
       <DependentUpon>individual_challenge_management.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="invoice_Information.aspx.cs">
       <DependentUpon>invoice_Information.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="invoice_Information.aspx.designer.cs">
       <DependentUpon>invoice_Information.aspx</DependentUpon>
+=======
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+>>>>>>> 85b885c119b6cdd6a5b52c259bcc3ec9b576b4c7
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="select_plan.aspx.cs">

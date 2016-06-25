@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,6 +35,12 @@ namespace DALFactory
         {
             string classname = path + ".Income";
             return (IDAL.IIncome)Assembly.Load(path).CreateInstance(classname);
+        }
+
+        public static IDAL.IDoChallenge CreateDC()
+        {
+            string className = path + ".DoChallenge";
+            return (IDAL.IDoChallenge)Assembly.Load(path).CreateInstance(className);
         }
     }
 }

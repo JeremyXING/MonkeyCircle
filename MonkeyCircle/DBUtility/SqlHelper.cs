@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Configuration;
 using System.Collections;
 using System.Data;
@@ -9,7 +9,7 @@ namespace DBUtility
 {
     public abstract class SqlHelper
     {
-        public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["masterConnectionString"].ConnectionString;
+        public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["SQLConnString"].ConnectionString;
         private static Hashtable parmCache = Hashtable.Synchronized(new Hashtable());
 
         public static int ExecuteSql(string SQLString)
@@ -242,3 +242,4 @@ namespace DBUtility
         }
     }
 }
+>>>>>>> 85b885c119b6cdd6a5b52c259bcc3ec9b576b4c7
